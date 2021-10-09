@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Contact</title>
+</head>
+<body>
+    <nav>
+        <a href="tickets.html">TICKETS</a>
+        <a href="team.html">TEAM</a>
+        <a href="news.html">NEWS</a>
+        <a href="store.html">SHOP</a>
+        <a href="media.html">MEDIA</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <form>
+        <fieldset name="information">
+            <label for="firstname">First name</label><br>
+            <input type="text" id="firstname" name="firstname"><br>
+            <label for="lastname">Last name</label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+            <label for="email">Email</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="dateofbirth">Date of Birth</label><br>
+            <input type="dateofbirth" id="dateofbirth" name="dateofbirth"><br>
+            <label for="gender">Gender</label><br>
+            <select name="gender" id="gender"><br>
+                <option value="woman">Woman</option>
+                <option value="man">Man</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="other">Other</option>
+                <option value="na">Prefer to not disclose</option>
+            </select><br>
+            <input type="checkbox" id="commercialoffers" name="commercialoffers" checked value="receivecommercialoffers">
+            <label for="commercialoffers"> I want to receive commercial offers from Team FC</label><br>
+            <input type="checkbox" id="news" name="news" checked value="receivenews">
+            <label for="news"> I want to receive news and press releases from Team FC</label><br>
+            <input type="reset" value="Reset form">
+            <input type="submit" value="Submit form">
+        </fieldset>
+    </form>    
+</body>
+</html>
