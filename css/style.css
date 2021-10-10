@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.post{
+    color: #424949;
+}
+
+#nextmatches{
+    color: #C5BA3A;
+}
+
+.matches{
+    color: darkgoldenrod;
+}
+
+.footertext{
+    color: #424949;
+}
+
+#teamname {
+    font-size: xx-large;
+    color: darkgoldenrod;
+}

@@ -7,12 +7,13 @@
     <title>Team Website</title>
 </head>
 <body>
-    <img src="logo.svg" alt= "Team logo" width="250">
+    <img src="imgs/logo.svg" alt= "Team logo" width="250">
     <header>
-        <h1>TEAM'S NAME</h1>
+        <h1 id="teamname">TEAM'S NAME</h1>
     </header>
     <span>Log in</span>
     <span>Sign in</span>
+
     <nav>
         <a href="tickets.html">TICKETS</a>
         <a href="team.html">TEAM</a>
@@ -21,8 +22,10 @@
         <a href="media.html">MEDIA</a>
         <a href="contact.html">CONTACT</a>
     </nav>
+
     <aside>
-        <div>
+
+        <div class="matches" id="nextmatches">
             <p>MMM, dd yyyy</p>
             <div>
                 <span>First logo</span>
@@ -31,7 +34,8 @@
             </div>
             <p>Stadium, where</p>
         </div>
-        <div>
+
+        <div class="matches">
             <p>MMM, dd yyyy</p>
             <div>
                 <span>First logo</span>
@@ -40,7 +44,8 @@
             </div>
             <p>Stadium, where</p>
         </div>
-        <div>
+
+        <div class="matches">
             <p>MMM, dd yyyy</p>
             <div>
                 <span>First logo</span>
@@ -50,8 +55,19 @@
             <p>Stadium, where</p>
         </div>
     </aside>
+
     <section>
-        <article>
+
+        <article class="post">
+            <h2>TITLE FOR PAGE</h2>
+            <h3>Subtitle</h3>
+            <p class= "post"> 
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+            </p>
+        </article>
+
+        <article class="post">
             <h2>TITLE FOR PAGE</h2>
             <h3>Subtitle</h3>
             <p> 
@@ -59,7 +75,8 @@
                 totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
             </p>
         </article>
-        <article>
+
+        <article class="post">
             <h2>TITLE FOR PAGE</h2>
             <h3>Subtitle</h3>
             <p> 
@@ -67,7 +84,8 @@
                 totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
             </p>
         </article>
-        <article>
+
+        <article class="post">
             <h2>TITLE FOR PAGE</h2>
             <h3>Subtitle</h3>
             <p> 
@@ -75,26 +93,21 @@
                 totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
             </p>
         </article>
-        <article>
-            <h2>TITLE FOR PAGE</h2>
-            <h3>Subtitle</h3>
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-            </p>
-        </article>
+
     </section>
+
     <footer>
+
         <div>
-            <h5>BUY</h5>
+            <h5 class="footertext">BUY</h5>
             <a href="">TICKETS</a>
             <a href="">JERSEYS</a>
             <a href="">CLOTHES</a>
             <a href="">OTHER ITEMS</a> 
         </div>
-        
+
         <div>
-            <h5>TEAM</h5>
+            <h5 class="footertext">TEAM</h5>
             <a href="">STATS</a>
             <a href="">ROSTER</a>
             <a href="">STAFF</a>
@@ -102,7 +115,7 @@
         </div>
         
         <div>
-            <h5>TEAM</h5>
+            <h5 class="footertext">TEAM</h5>
             <a href="">STANDINGS</a>
             <a href="">PREVIOUS GAMES</a>
             <a href="">PRESS RELEASES</a>
@@ -110,20 +123,20 @@
         </div>
 
         <div>
-            <h5>MEDIA</h5>
+            <h5 class="footertext">MEDIA</h5>
             <a href="">MEDIA CONTACTS</a>
             <a href="">MEDIA RESOURCES</a>
             <a href="">MAILING LIST</a>
         </div>
         
         <div>
-            <h5>SOCIAL MEDIA</h5>
+            <h5 class="footertext">SOCIAL MEDIA</h5>
             <a href="">Instagram</a>
             <a href="">Twitter</a>
             <a href="">Facebook</a>
             <a href="">Tiktok</a>
         </div>
-        
+
     </footer>
 </body>
 </html>
