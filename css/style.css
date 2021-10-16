@@ -6,6 +6,12 @@
     font-family: Roboto, sans-serif;
 }
 
+#teamname {
+    font-size: xx-large;
+    color: darkgoldenrod;
+    text-align: center;
+}
+
 nav {
     background-color: #37393E;
 }
@@ -21,14 +27,6 @@ nav a:hover{
 
 nav a:active{
     background-color: #C0996D;
-}
-
-footer{
-    background-color: #37393E;
-}
-
-footer a {
-    font-size: 0.5rem;
 }
 
 .content{
@@ -61,13 +59,19 @@ footer a {
     color: darkgoldenrod;
 }
 
+.socialmedia li{
+    display: inline;     
+}
+
 .footertext{
     color: #FFFFFF;
     font-weight: bold;
 }
 
-#teamname {
-    font-size: xx-large;
-    color: darkgoldenrod;
-    text-align: center;
+footer{
+    background-color: #37393E;
+}
+
+footer a {
+    font-size: 0.5rem;
 }
