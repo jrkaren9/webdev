@@ -4,15 +4,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Team Website</title>
 </head>
-<body>
-    <img src="imgs/logo.svg" alt= "Team logo" width="250">
+<div>
+    <img src="imgs/logo.svg" alt="Team logo" width="100">
 
     <header>
-        <h1>TEAM'S NAME</h1>
+        <h1 id="teamname">TEAM'S NAME</h1>
         <span>Log in</span>
         <span>Sign in</span>
+        <input type="text" placeholder="Search..">
     </header>
     
     <nav>
@@ -26,73 +30,90 @@
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
-    <aside>
+
+    <div class="content">
         <div>
-            <p>MMM, dd yyyy</p>
-            <div>
-                <span>First logo</span>
-                <span><p>vs</p></span>
-                <span>Second logo</span>
-            </div>
-            <p>Stadium, where</p>
+            <aside>
+        
+                <div class="matches" id="nextmatch">
+                    <p>MMM, dd yyyy</p>
+                    <div>
+                        <span>First logo</span>
+                        <span><p>vs</p></span>
+                        <span>Second logo</span>
+                    </div>
+                    <p>Stadium, where</p>
+                </div>
+        
+                <div class="matches">
+                    <p>MMM, dd yyyy</p>
+                    <div>
+                        <span>First logo</span>
+                        <span><p>vs</p></span>
+                        <span>Second logo</span>
+                    </div>
+                    <p>Stadium, where</p>
+                </div>
+        
+                <div class="matches">
+                    <p>MMM, dd yyyy</p>
+                    <div>
+                        <span>First logo</span>
+                        <span><p>vs</p></span>
+                        <span>Second logo</span>
+                    </div>
+                    <p>Stadium, where</p>
+                </div>
+            </aside>
         </div>
+
         <div>
-            <p>MMM, dd yyyy</p>
-            <div>
-                <span>First logo</span>
-                <span><p>vs</p></span>
-                <span>Second logo</span>
-            </div>
-            <p>Stadium, where</p>
+            <section>
+        
+                <article class="post">
+                    <h1>Title for page</h1>
+                    <h2>Subtitle</h2>
+                    <p> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                        totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                    </p>
+                </article>
+        
+                <article class="post">
+                    <h1>Title for page</h1>
+                    <h2>Subtitle</h2>
+                    <p> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                        totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                    </p>
+                </article>
+        
+                <article class="post">
+                    <h1>Title for page</h1>
+                    <h2>Subtitle</h2>
+                    <p> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                        totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                    </p>
+                </article>
+        
+                <article class="post">
+                    <h1>Title for page</h1>
+                    <h2>Subtitle</h2>
+                    <p> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                        totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                    </p>
+                </article>
+        
+            </section>
         </div>
-        <div>
-            <p>MMM, dd yyyy</p>
-            <div>
-                <span>First logo</span>
-                <span><p>vs</p></span>
-                <span>Second logo</span>
-            </div>
-            <p>Stadium, where</p>
-        </div>
-    </aside>
-    <section>
-        <article>
-            <h2>TITLE FOR PAGE</h2>
-            <h3>Subtitle</h3>
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-            </p>
-        </article>
-        <article>
-            <h2>TITLE FOR PAGE</h2>
-            <h3>Subtitle</h3>
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-            </p>
-        </article>
-        <article>
-            <h2>TITLE FOR PAGE</h2>
-            <h3>Subtitle</h3>
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-            </p>
-        </article>
-        <article>
-            <h2>TITLE FOR PAGE</h2>
-            <h3>Subtitle</h3>
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-            </p>
-        </article>
-    </section>
+    </div>
 
     <footer>
+
         <div>
-            <h5>BUY</h5>
+            <h5 class="footertext">BUY</h5>
             <ul>
                 <a href="">TICKETS</a>
                 <a href="">JERSEYS</a>
@@ -100,9 +121,9 @@
                 <a href="">OTHER ITEMS</a> 
             </ul>
         </div>
-        
+
         <div>
-            <h5>TEAM</h5>
+            <h5 class="footertext">TEAM</h5>
             <ul>
                 <a href="">STATS</a>
                 <a href="">ROSTER</a>
@@ -112,7 +133,7 @@
         </div>
         
         <div>
-            <h5>TEAM</h5>
+            <h5 class="footertext">TEAM</h5>
             <ul>
                 <a href="">STANDINGS</a>
                 <a href="">PREVIOUS GAMES</a>
@@ -122,7 +143,7 @@
         </div>
 
         <div>
-            <h5>MEDIA</h5>
+            <h5 class="footertext">MEDIA</h5>
             <ul>
                 <a href="">MEDIA CONTACTS</a>
                 <a href="">MEDIA RESOURCES</a>
@@ -131,7 +152,7 @@
         </div>
         
         <div>
-            <h5>SOCIAL MEDIA</h5>
+            <h5 class="footertext">SOCIAL MEDIA</h5>
             <ul>
                 <a href="">Instagram</a>
                 <a href="">Twitter</a>
@@ -139,7 +160,7 @@
                 <a href="">Tiktok</a>
             </ul>
         </div>
-        
+
     </footer>
 </body>
 </html>
