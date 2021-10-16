@@ -1,14 +1,59 @@
 * {
+    /* this even hides the bullet from lists!*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
 }
 
-.post{
+nav {
+    background-color: #37393E;
+}
+
+ul a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav a:hover{
+    background-color: #6D6D6D;
+}
+
+nav a:active{
+    background-color: #C0996D;
+}
+
+footer{
+    background-color: #37393E;
+}
+
+footer a {
+    font-size: 0.5rem;
+}
+
+.content{
+    background-color: #E5E5E5;
+}
+
+.post h1{
     color: #424949;
+    line-height: 2;
+    font-size: 1.2rem;
+    font-style: bold;
+    text-transform: capitalize;
 }
 
-#nextmatches{
+.post h2{
+    line-height: 1.5;
+    font-size: 1rem;
+    text-transform: initial;
+}
+
+.post p{
+    text-indent: 1rem;
+}
+
+#nextmatch{
     color: #C5BA3A;
 }
 
@@ -17,10 +62,12 @@
 }
 
 .footertext{
-    color: #424949;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 #teamname {
     font-size: xx-large;
     color: darkgoldenrod;
+    text-align: center;
 }
