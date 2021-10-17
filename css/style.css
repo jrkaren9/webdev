@@ -13,7 +13,19 @@ header {
 #teamname {
     font-size: xx-large;
     color: darkgoldenrod;
+    display: inline-block;
     text-align: center;
+    width: 60vw;
+}
+
+#header_search {
+    display: inline-block;
+    text-align: right;
+    width: 30vw;
+}
+
+#header_search div, #header_search input {
+    display: inline-block;
 }
 
 nav {
@@ -29,9 +41,6 @@ ul {
     color: #FFFFFF;
 }
 
-.menuitem a {
-}
-
 nav ul {
     text-align: center;
 }
@@ -39,7 +48,7 @@ nav ul {
 .menuitem {
     display: inline-block;
     position: relative;
-    width: 20vh;
+    width: 10vw;
     height: 5vh;
     padding: 1vh;
 }
@@ -60,6 +69,7 @@ nav ul {
     left: 0;
     top: 5vh;
     background-color: #C0996D;
+    width: 10vw;
 }
 
 .submenu_item {
@@ -69,16 +79,20 @@ nav ul {
     font-weight: normal;
  }
 
-  {
-
- }
-
- .menuitem:hover .submenu {
+.menuitem:hover .submenu {
     display:block;
  }
  
 .content{
     background-color: #E5E5E5;
+    text-align: center;
+}
+
+#posts {
+    display: inline-block;
+    text-align: left;
+    margin: 2vh 2vw 4vh;
+    width: 70%;
 }
 
 .post h1{
@@ -99,12 +113,22 @@ nav ul {
     text-indent: 1rem;
 }
 
-#nextmatch{
-    color: #C5BA3A;
+#matches {
+    display: inline-block;
+    border-right: solid 0.5vh #C0996D;
+    margin: 2vh 1vw;
+    vertical-align: top;
+    text-align: left;
+    width: 20%;
 }
 
-.matches{
+.match{
     color: darkgoldenrod;
+    padding: 2vh;
+}
+
+#nextmatch{
+    color: #C5BA3A;
 }
 
 footer{

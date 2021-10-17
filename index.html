@@ -14,9 +14,11 @@
 
     <header>
         <h1 id="teamname">TEAM'S NAME</h1>
-        <span>Log in</span>
-        <span>Sign in</span>
-        <input type="text" placeholder="Search..">
+        <div id="header_search">
+            <div>Log in</div>
+            <div>Sign in</div>
+            <input type="text" placeholder="Search..">
+        </div>
     </header>
     
     <nav>
@@ -25,13 +27,12 @@
             <li class="menuitem"><a href="tickets.html">TICKETS</a></li>
             <li class="menuitem"><a href="team.html">TEAM</a>
                 <ul class="submenu">
-                    <li class="submenu_item"><a href="">STANDINGS</a></li>
-                    <li class="submenu_item"><a href="">PREVIOUS GAMES</a></li>
-                    <li class="submenu_item"><a href="">PRESS RELEASES</a></li>
-                    <li class="submenu_item"><a href="">OTHER NEWS</a></li>
+                    <li class="submenu_item"><a href="">STATS</a></li>
+                    <li class="submenu_item"><a href="">ROSTER</a></li>
+                    <li class="submenu_item"><a href="">STAFF</a></li>
+                    <li class="submenu_item"><a href="">FACILITIES</a></li>
                 </ul>
             </li>
-            
             <li class="menuitem"><a href="news.html">NEWS</a></li>
             <li class="menuitem"><a href="store.html">SHOP</a></li>
             <li class="menuitem"><a href="media.html">MEDIA</a></li>
@@ -40,34 +41,34 @@
     </nav>
 
     <div class="content">
-        <div>
+        <div id="matches">
             <aside>
-        
-                <div class="matches" id="nextmatch">
+
+                <div class="match" id="nextmatch">
                     <p>MMM, dd yyyy</p>
                     <div>
                         <span>First logo</span>
-                        <span><p>vs</p></span>
+                        <span>vs</span>
                         <span>Second logo</span>
                     </div>
                     <p>Stadium, where</p>
                 </div>
         
-                <div class="matches">
+                <div class="match">
                     <p>MMM, dd yyyy</p>
                     <div>
                         <span>First logo</span>
-                        <span><p>vs</p></span>
+                        <span>vs</span>
                         <span>Second logo</span>
                     </div>
                     <p>Stadium, where</p>
                 </div>
         
-                <div class="matches">
+                <div class="match">
                     <p>MMM, dd yyyy</p>
                     <div>
                         <span>First logo</span>
-                        <span><p>vs</p></span>
+                        <span>vs</span>
                         <span>Second logo</span>
                     </div>
                     <p>Stadium, where</p>
@@ -75,9 +76,8 @@
             </aside>
         </div>
 
-        <div>
+        <div id="posts">
             <section>
-        
                 <article class="post">
                     <h1>Title for page</h1>
                     <h2>Subtitle</h2>
@@ -138,7 +138,7 @@
             </ul>
         </div>
         <div class="footercolumn">
-            <h5 class="footertext">TEAM</h5>
+            <h5 class="footertext">NEWS</h5>
             <ul>
                 <li><a href="">STANDINGS</a></li>
                 <li><a href="">PREVIOUS GAMES</a></li>
