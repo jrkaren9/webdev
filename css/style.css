@@ -6,33 +6,93 @@
     font-family: Roboto, sans-serif;
 }
 
+header {
+    margin: 1vh 0vh 2vh 0vh;
+}
+
+#teamname {
+    font-size: xx-large;
+    color: darkgoldenrod;
+    display: inline-block;
+    text-align: center;
+    width: 60vw;
+}
+
+#header_search {
+    display: inline-block;
+    text-align: right;
+    width: 30vw;
+}
+
+#header_search div, #header_search input {
+    display: inline-block;
+}
+
 nav {
     background-color: #37393E;
 }
 
-ul a {
+ul {
+    list-style-type: none;
+}
+
+.menuitem a, footer a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-nav a:hover{
-    background-color: #6D6D6D;
+nav ul {
+    text-align: center;
 }
 
-nav a:active{
+.menuitem {
+    display: inline-block;
+    position: relative;
+    width: 10vw;
+    height: 5vh;
+    padding: 1vh;
+}
+
+.menuitem:hover, .submenu_item:hover{
+    background-color: #6D6D6D;
+    font-weight: 500;
+}
+
+.menuitem:active{
     background-color: #C0996D;
 }
 
-footer{
-    background-color: #37393E;
+.submenu {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 5vh;
+    background-color: #C0996D;
+    width: 10vw;
 }
 
-footer a {
-    font-size: 0.5rem;
-}
+.submenu_item {
+    display: block;
+    padding: 1vh 2vh;
+    text-align: left;
+    font-weight: normal;
+ }
 
+.menuitem:hover .submenu {
+    display:block;
+ }
+ 
 .content{
     background-color: #E5E5E5;
+    text-align: center;
+}
+
+#posts {
+    display: inline-block;
+    text-align: left;
+    margin: 2vh 2vw 4vh;
+    width: 70%;
 }
 
 .post h1{
@@ -53,21 +113,50 @@ footer a {
     text-indent: 1rem;
 }
 
+#matches {
+    display: inline-block;
+    border-right: solid 0.5vh #C0996D;
+    margin: 2vh 1vw;
+    vertical-align: top;
+    text-align: left;
+    width: 20%;
+}
+
+.match{
+    color: darkgoldenrod;
+    padding: 2vh;
+}
+
 #nextmatch{
     color: #C5BA3A;
 }
 
-.matches{
-    color: darkgoldenrod;
+footer{
+    background-color: #37393E;
+    padding: 1vh;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+footer a {
+    font-size: 0.5rem;
+}
+
+.footercolumn {
+    display: inline-block;
+    width: auto;
+    margin: 1vh 5%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.socialmedia li{
+    display: inline;  
+    margin-right: 1.5vh;   
 }
 
 .footertext{
     color: #FFFFFF;
     font-weight: bold;
-}
-
-#teamname {
-    font-size: xx-large;
-    color: darkgoldenrod;
-    text-align: center;
+    margin: 1vh 0vh;
 }
