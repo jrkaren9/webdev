@@ -6,9 +6,9 @@
     font-family: Roboto, sans-serif;
 }
 
-body {
-    background-color: #E5E5E5;
-}
+/***********************************
+            Grid
+ ***********************************/
 
 #grid {
     display: grid;
@@ -17,6 +17,7 @@ body {
         "content"
         "footer";
     grid-template-rows: auto 80% auto;
+    min-height: 100vh;
 }
 
 #logo_team{
@@ -25,7 +26,9 @@ body {
     float: left;
 }
 
-/* HEADER */
+/***********************************
+            HEADER
+ ***********************************/
 
 #top_header {
     background-color: #FFFFFF;
@@ -33,7 +36,7 @@ body {
 }
 
 header {
-    margin: 1vh 0vh 2vh 0vh;
+    margin: 2vh 0vh 1vh 0vh;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -60,7 +63,9 @@ header {
     margin: 0.5rem;
 }
 
-/* NAVBAR */ 
+/***********************************
+                NAVBAR
+ ***********************************/
 
 nav {
     background-color: #37393E;
@@ -96,39 +101,55 @@ ul {
     padding: 0.5rem 0vw;
 }
 
-.menuitem:hover, .submenu_item:hover{
+.menuitem:hover {
     background-color: #6D6D6D;
     font-weight: 500;
-}
-
-.menuitem:active{
-    background-color: #C0996D;
 }
 
 .submenu {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 8rem;
     visibility: hidden;
-    background-color: #C0996D;
+
+    width: 8rem;
+    background-color: inherit;
 }
 
 .submenu_item {
     height: auto;
     overflow: hidden;
+
     padding: 0.5rem 1vw;
-    font-weight: normal;
- }
+    font-size: 0.7rem;
+}
+
+.submenu_item:hover {
+    background-color: #FFFFFF;
+    transition: ease-in;
+    transition-duration: 0.5s;
+}
+
+.submenu_item:hover a {
+    color: #000000;
+    border-bottom-color: #C0996D;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+}
 
 .menuitem:hover .submenu {
     visibility: visible;
     position: relative;
     top: 0.3rem;
     left: 0;
- }
- 
+}
+
+ /***********************************
+            Content
+ ***********************************/
+
 #content{
+    background-color: #E5E5E5;
     grid-area: content;
     display: grid;
     grid-template-areas: 
@@ -137,32 +158,39 @@ ul {
 }
 
 
-/*MATCHES */
+/***********************************
+            Matches
+ ***********************************/
 
 #matches {
     grid-area: matches;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: right;
+    justify-content: lefttumb;
     align-content: center;
     
     border-bottom: solid 0.5vh #C0996D;
-    vertical-align: top;
-    text-align: left;
     margin: 0 0 0 200px;
+    overflow: hidden;
 }
 
 .match{
+    background-color: #000;
     color: darkgoldenrod;
+    vertical-align: top;
+    text-align: left;
     padding: 1rem 1rem 0 1rem;
+    min-width: 12rem;
 }
 
 #nextmatch{
     color: #C5BA3A;
 }
 
-/* POSTS */
+/***********************************
+            Posts
+ ***********************************/
 
 #posts {
     grid-area: posts;
@@ -189,24 +217,30 @@ ul {
     text-indent: 1rem;
 }
 
-/* NEWS */
+/***********************************
+            News
+ ***********************************/
 
 #news {
     grid-area: "news";
 }
 
-/* FOOTER */
+/***********************************
+            Footer
+ ***********************************/
 
 footer{
     grid-area: footer;
+    display: flex;
+    display: row;
+    align-items: flex-start;
+    
     padding: 1vh;
     background-color: #37393E;
-    align-items: flex-start;
 }
 
 footer a {
     font-size: 0.7rem;
-    display: flex;
 }
 
 .footercolumn {
@@ -220,10 +254,23 @@ footer a {
     margin: 1vh 0vh;
 }
 
-.socialmedia{
-    justify-content: space-between;
+#socialmedia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 } 
 
 .socialmedia li {
-    margin: 4px 8px 0 0;
+    margin: 4px 4px 0 0;
+}
+
+.socialmedia a {
+    color: #FFFFFF;
+}
+
+#header_image{
+    background-image: url("../imgs/contact_image.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
 }
