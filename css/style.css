@@ -6,27 +6,66 @@
     font-family: Roboto, sans-serif;
 }
 
+/***********************************
+            Grid
+ ***********************************/
+
+#grid {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    grid-template-rows: auto 80% auto;
+    min-height: 100vh;
+}
+
+#logo_team{
+    position: absolute;
+    margin: 1rem 0 0 1rem;
+    float: left;
+}
+
+/***********************************
+            HEADER
+ ***********************************/
+
+#top_header {
+    background-color: #FFFFFF;
+    grid-area: header;        
+}
+
 header {
-    margin: 1vh 0vh 2vh 0vh;
+    margin: 2vh 0vh 1vh 0vh;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: right;
 }
 
 #teamname {
-    font-size: xx-large;
+    font-size: 2rem;
     color: darkgoldenrod;
-    display: inline-block;
-    text-align: center;
-    width: 60vw;
+    margin: 0 8vw 0 250px;
 }
 
 #header_search {
-    display: inline-block;
-    text-align: right;
-    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: baseline;
+    margin: 0 2vw 0 10vw;
 }
 
-#header_search div, #header_search input {
-    display: inline-block;
+#header_search div{
+    margin: 0.5rem;
 }
+
+/***********************************
+                NAVBAR
+ ***********************************/
 
 nav {
     background-color: #37393E;
@@ -41,55 +80,120 @@ ul {
     color: #FFFFFF;
 }
 
-nav ul {
+
+.nav_menu, footer, .socialmedia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.nav_menu {
+    margin: 0 0 0 200px;
+}
+
+.menuitem, submenu_item{
     text-align: center;
+    width: 8rem;
+    height: 2rem;
+    padding: 0.5rem 0vw;
 }
 
-.menuitem {
-    display: inline-block;
-    position: relative;
-    width: 10vw;
-    height: 5vh;
-    padding: 1vh;
-}
-
-.menuitem:hover, .submenu_item:hover{
+.menuitem:hover {
     background-color: #6D6D6D;
     font-weight: 500;
 }
 
-.menuitem:active{
-    background-color: #C0996D;
-}
-
 .submenu {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    display: none;
-    z-index: 1;
-    left: 0;
-    top: 5vh;
-    background-color: #C0996D;
-    width: 10vw;
+    visibility: hidden;
+
+    width: 8rem;
+    background-color: inherit;
 }
 
 .submenu_item {
-    display: block;
-    padding: 1vh 2vh;
-    text-align: left;
-    font-weight: normal;
- }
+    height: auto;
+    overflow: hidden;
 
-.menuitem:hover .submenu {
-    display:block;
- }
- 
-.content{
-    background-color: #E5E5E5;
-    text-align: center;
+    padding: 0.5rem 1vw;
+    font-size: 0.7rem;
 }
 
+.submenu_item:hover {
+    background-color: #FFFFFF;
+    transition: ease-in;
+    transition-duration: 0.5s;
+}
+
+.submenu_item:hover a {
+    color: #000000;
+    border-bottom-color: #C0996D;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+}
+
+.menuitem:hover .submenu {
+    visibility: visible;
+    position: relative;
+    top: 0.3rem;
+    left: 0;
+}
+
+ /***********************************
+            Content
+ ***********************************/
+
+#content{
+    background-color: #E5E5E5;
+    grid-area: content;
+    display: grid;
+    grid-template-areas: 
+        "matches"
+        "posts" "news";
+}
+
+
+/***********************************
+            Matches
+ ***********************************/
+
+#matches {
+    grid-area: matches;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: lefttumb;
+    align-content: center;
+    
+    border-bottom: solid 0.5vh #C0996D;
+    margin: 0 0 0 200px;
+    overflow: hidden;
+}
+
+.match{
+    background-color: #000;
+    color: darkgoldenrod;
+    vertical-align: top;
+    text-align: left;
+    padding: 1rem 1rem 0 1rem;
+    min-width: 12rem;
+}
+
+#nextmatch{
+    color: #C5BA3A;
+}
+
+/***********************************
+            Posts
+ ***********************************/
+
 #posts {
-    display: inline-block;
+    grid-area: posts;
     text-align: left;
     margin: 2vh 2vw 4vh;
     width: 70%;
@@ -113,50 +217,60 @@ nav ul {
     text-indent: 1rem;
 }
 
-#matches {
-    display: inline-block;
-    border-right: solid 0.5vh #C0996D;
-    margin: 2vh 1vw;
-    vertical-align: top;
-    text-align: left;
-    width: 20%;
+/***********************************
+            News
+ ***********************************/
+
+#news {
+    grid-area: "news";
 }
 
-.match{
-    color: darkgoldenrod;
-    padding: 2vh;
-}
-
-#nextmatch{
-    color: #C5BA3A;
-}
+/***********************************
+            Footer
+ ***********************************/
 
 footer{
-    background-color: #37393E;
+    grid-area: footer;
+    display: flex;
+    display: row;
+    align-items: flex-start;
+    
     padding: 1vh;
-    text-align: center;
-    vertical-align: bottom;
+    background-color: #37393E;
 }
 
 footer a {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .footercolumn {
-    display: inline-block;
     width: auto;
     margin: 1vh 5%;
-    vertical-align: top;
-    text-align: left;
-}
-
-.socialmedia li{
-    display: inline;  
-    margin-right: 1.5vh;   
 }
 
 .footertext{
     color: #FFFFFF;
     font-weight: bold;
     margin: 1vh 0vh;
+}
+
+#socialmedia{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} 
+
+.socialmedia li {
+    margin: 4px 4px 0 0;
+}
+
+.socialmedia a {
+    color: #FFFFFF;
+}
+
+#header_image{
+    background-image: url("../imgs/contact_image.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 20rem;
 }
