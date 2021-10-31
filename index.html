@@ -17,158 +17,175 @@
     </div>   
 
     <div id="grid">  
-        <div id="top_header">
+        <div id="topheader">
 
-            <header>
-                <h1 id="teamname">TEAM'S NAME</h1>
-                <div id="header_search">
-                    <div>Log in</div>
-                    <div>Sign in</div>
-                    <div id="search">
-                        <input type="text" placeholder="Search..">
+            <header id="header">
+                <div id="header__flex"> 
+                    <h1 id="header__teamname">TEAM'S NAME</h1>
+                    <div id="header__search">
+                        <div class="header__searchitem" id="search__login">Log in</div>
+                        <div class="header__searchitem" id="search__signin">Sign in</div>
+                        <div class="header__searchitem" id="search__field">
+                            <input type="text" placeholder="Search..">
+                        </div>
                     </div>
                 </div>
             </header>
             
-            <nav>
-                <ul class="nav_menu">
-                    <li class="menuitem"><a href="index.html">HOME</a></li>
-                    <li class="menuitem"><a href="tickets.html">TICKETS</a></li>
-                    <li class="menuitem"><a href="team.html">TEAM</a>
-                        <ul class="submenu">
-                            <li class="submenu_item"><a href="">STATS</a></li>
-                            <li class="submenu_item"><a href="">ROSTER</a></li>
-                            <li class="submenu_item"><a href="">STAFF</a></li>
-                            <li class="submenu_item"><a href="">FACILITIES</a></li>
+            <nav id="nav">
+                <ul class="nav__menu">
+                    <li class="nav__menuitem"><a href="index.html">HOME</a></li>
+                    <li class="nav__menuitem"><a href="../pages/tickets.html">TICKETS</a></li>
+                    <li class="nav__menuitem"><a href="../pages/team.html">TEAM</a>
+                        <ul class="nav__menuitem__submenu">
+                            <li class="nav__menuitem__submenuitem"><a href="">STATS</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">ROSTER</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">STAFF</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">FACILITIES</a></li>
                         </ul>
                     </li>
-                    <li class="menuitem"><a href="news.html">NEWS</a>
-                        <ul class="submenu">
-                            <li class="submenu_item"><a href="">STANDINGS</a></li>
-                            <li class="submenu_item"><a href="">PREVIOUS GAMES</a></li>
-                            <li class="submenu_item"><a href="">PRESS RELEASES</a></li>
-                            <li class="submenu_item"><a href="">OTHER NEWS</a></li>
+                    <li class="nav__menuitem"><a href="../pages/news.html">NEWS</a>
+                        <ul class="nav__menuitem__submenu">
+                            <li class="nav__menuitem__submenuitem"><a href="">STANDINGS</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">PREVIOUS GAMES</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">PRESS RELEASES</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">OTHER NEWS</a></li>
                         </ul>
                     </li>
-                    <li class="menuitem"><a href="store.html">SHOP</a>
-                        <ul class="submenu">
-                            <li class="submenu_item"><a href="">JERSEYS</a></li>
-                            <li class="submenu_item"><a href="">CLOTHES</a></li>
-                            <li class="submenu_item"><a href="">OTHER ITEMS</a></li>
+                    <li class="nav__menuitem"><a href="../pages/store.html">SHOP</a>
+                        <ul class="nav__menuitem__submenu">
+                            <li class="nav__menuitem__submenuitem"><a href="">JERSEYS</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">CLOTHES</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">OTHER ITEMS</a></li>
                         </ul>
                     </li>
-                    <li class="menuitem"><a href="media.html">MEDIA</a>
-                        <ul class="submenu">
-                            <li class="submenu_item"><a href="">MEDIA CONTACTS</a></li>
-                            <li class="submenu_item"><a href="">MEDIA RESOURCES</a></li>
-                            <li class="submenu_item"><a href="">MAILING LIST</a></li>
+                    <li class="nav__menuitem"><a href="../pages/media.html">MEDIA</a>
+                        <ul class="nav__menuitem__submenu">
+                            <li class="nav__menuitem__submenuitem"><a href="">MEDIA CONTACTS</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">MEDIA RESOURCES</a></li>
+                            <li class="nav__menuitem__submenuitem"><a href="">MAILING LIST</a></li>
                         </ul>
                     </li>
-                    <li class="menuitem"><a href="contact.html">CONTACT</a></li>
+                    <li class="nav__menuitem"><a href="../pages/contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
 
         <div id="content">
+            <div id="bignew">
+                <div class="bignew__card">
+                </div>
+            </div>
+
             <div id="matches">
-                <div class="match">
-                    <p>October 23th, 2021</p>
-                    <p>21:00 ET</p>
-                    <div>
-                        <span>First logo</span>
-                        <span>vs</span>
-                        <span>Second logo</span>
+                <div class="matches__list">
+                    <div class="matches__match">
+                        <p>October 23th, 2021</p>
+                        <p>21:00 ET</p>
+                        <div>
+                            <span>First logo</span>
+                            <span>vs</span>
+                            <span>Second logo</span>
+                        </div>
+                        <p>Stadium, where</p>
                     </div>
-                    <p>Stadium, where</p>
-                </div>
-        
-                <div class="match" id="nextmatch">
-                    <p>October 30th, 2021</p>
-                    <p>21:00 ET</p>
-                    <div>
-                        <span>First logo</span>
-                        <span>vs</span>
-                        <span>Second logo</span>
+            
+                    <div class="matches__match" id="matches__nextmatch">
+                        <p>October 30th, 2021</p>
+                        <p>21:00 ET</p>
+                        <div>
+                            <span>First logo</span>
+                            <span>vs</span>
+                            <span>Second logo</span>
+                        </div>
+                        <p>Stadium, where</p>
                     </div>
-                    <p>Stadium, where</p>
-                </div>
-        
-                <div class="match">
-                    <p>November 13th, 2021</p>
-                    <p>21:00 ET</p>
-                    <div>
-                        <span>First logo</span>
-                        <span>vs</span>
-                        <span>Second logo</span>
+            
+                    <div class="matches__match">
+                        <p>November 13th, 2021</p>
+                        <p>21:00 ET</p>
+                        <div>
+                            <span>First logo</span>
+                            <span>vs</span>
+                            <span>Second logo</span>
+                        </div>
+                        <p>Stadium, where</p>
                     </div>
-                    <p>Stadium, where</p>
-                </div>
-
-                <div class="match">
-                    <p>November 20th, 2021</p>
-                    <p>21:00 ET</p>
-                    <div>
-                        <span>First logo</span>
-                        <span>vs</span>
-                        <span>Second logo</span>
+    
+                    <div class="matches__match">
+                        <p>November 20th, 2021</p>
+                        <p>21:00 ET</p>
+                        <div>
+                            <span>First logo</span>
+                            <span>vs</span>
+                            <span>Second logo</span>
+                        </div>
+                        <p>Stadium, where</p>
                     </div>
-                    <p>Stadium, where</p>
-                </div>
-
-                <div class="match">
-                    <p>November 20th, 2021</p>
-                    <p>21:00 ET</p>
-                    <div>
-                        <span>First logo</span>
-                        <span>vs</span>
-                        <span>Second logo</span>
+    
+                    <div class="matches__match">
+                        <p>November 20th, 2021</p>
+                        <p>21:00 ET</p>
+                        <div>
+                            <span>First logo</span>
+                            <span>vs</span>
+                            <span>Second logo</span>
+                        </div>
+                        <p>Stadium, where</p>
                     </div>
-                    <p>Stadium, where</p>
                 </div>
             </div>
 
             <section id="posts">
-                <article class="post">
-                    <h2>Title for page</h2>
-                    <h1>Subtitle</h1>
-                    <p> 
+                <article class="posts__post">
+                    <h2 class="post__title">Title for page</h2>
+                    <h3 class="post__subtitle">Subtitle</h3>
+                    <div class="post__image">
+                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                    </div>
+                    <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
                         totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
                     </p>
                 </article>
         
-                <article class="post">
-                    <h2>Title for page</h2>
-                    <h1>Subtitle</h1>
-                    <p> 
+                <article class="posts__post">
+                    <h2 class="post__title">Title for page</h2>
+                    <h3 class="post__subtitle">Subtitle</h3>
+                    <div class="post__image">
+                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                    </div>
+                    <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
                         totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
                     </p>
                 </article>
         
-                <article class="post">
-                    <h2>Title for page</h2>
-                    <h1>Subtitle</h1>
-                    <p> 
+                <article class="posts__post">
+                    <h2 class="post__title">Title for page</h2>
+                    <h3 class="post__subtitle">Subtitle</h3>
+                    <div class="post__image">
+                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                    </div>
+                    <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
                         totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
                     </p>
                 </article>
         
-                <article class="post">
-                    <h2>Title for page</h2>
-                    <h1>Subtitle</h1>
-                    <p> 
+                <article class="posts__post">
+                    <h2 class="post__title">Title for page</h2>
+                    <h3 class="post__subtitle">Subtitle</h3>
+                    <div class="post__image">
+                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                    </div>
+                    <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
                         totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
                     </p>
                 </article>
         
             </section>
-
-            <div id="news">
-                
-            </div>
         </div>
 
         <footer>

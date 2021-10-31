@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    --space-for-logo: 200px;
 }
 
 /***********************************
@@ -16,13 +17,16 @@
         "header"
         "content"
         "footer";
-    grid-template-rows: auto 80% auto;
+    grid-template-rows: max(150rem, auto) 80% auto;
     min-height: 100vh;
 }
 
 #logo_team{
     position: absolute;
-    margin: 1rem 0 0 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 1rem;
+    width: --space-for-logo;
     float: left;
 }
 
@@ -30,37 +34,41 @@
             HEADER
  ***********************************/
 
-#top_header {
+#topheader {
     background-color: #FFFFFF;
     grid-area: header;        
 }
 
-header {
-    margin: 2vh 0vh 1vh 0vh;
+#header {
+    margin: 0.5rem 0;
+}
+#header__flex {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: right;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
 }
 
-#teamname {
+#header__teamname {
     font-size: 2rem;
     color: darkgoldenrod;
-    margin: 0 8vw 0 250px;
+    text-align: center;
+    margin-left: var(--space-for-logo);
+    flex-grow: 2;
 }
 
-#header_search {
+#header__search {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
     justify-content: flex-end;
-    align-content: flex-end;
+    align-content: center;
     align-items: baseline;
-    margin: 0 2vw 0 10vw;
+    width: 300px;
 }
 
-#header_search div{
-    margin: 0.5rem;
+.header__searchitem {
+    margin: 0 5px;
 }
 
 /***********************************
@@ -75,72 +83,68 @@ ul {
     list-style-type: none;
 }
 
-.menuitem a, footer a {
+.nav__menuitem a, footer a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-
-.nav_menu, footer, .socialmedia {
+.nav__menu, footer, .socialmedia {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     align-content: center;
+    align-items: center;
 }
 
-.nav_menu {
-    margin: 0 0 0 200px;
+.nav__menu {
+    margin: 0 20px 0 var(--space-for-logo);
 }
 
-.menuitem, submenu_item{
+.nav__menuitem, submenu_item{
     text-align: center;
     width: 8rem;
-    height: 2rem;
-    padding: 0.5rem 0vw;
+    height: 3rem;
+    padding: 1rem 0 1rem 0;
 }
 
-.menuitem:hover {
+.nav__menuitem:hover {
     background-color: #6D6D6D;
     font-weight: 500;
 }
 
-.submenu {
+.nav__menuitem__submenu {
     display: flex;
     flex-direction: column;
     position: absolute;
     visibility: hidden;
-
     width: 8rem;
     background-color: inherit;
 }
 
-.submenu_item {
+.nav__menuitem__submenuitem {
     height: auto;
     overflow: hidden;
-
     padding: 0.5rem 1vw;
     font-size: 0.7rem;
 }
 
-.submenu_item:hover {
+.nav__menuitem__submenuitem:hover {
     background-color: #FFFFFF;
     transition: ease-in;
     transition-duration: 0.5s;
 }
 
-.submenu_item:hover a {
+.nav__menuitem__submenuitem:hover a {
     color: #000000;
     border-bottom-color: #C0996D;
     border-width: 0 0 2px 0;
     border-style: solid;
 }
 
-.menuitem:hover .submenu {
+.nav__menuitem:hover .nav__menuitem__submenu {
     visibility: visible;
     position: relative;
-    top: 0.3rem;
+    top: 0.7rem;
     left: 0;
 }
 
@@ -152,39 +156,56 @@ ul {
     background-color: #E5E5E5;
     grid-area: content;
     display: grid;
-    grid-template-areas: 
-        "matches"
-        "posts" "news";
+    grid-template-areas:
+        "bignew" 
+        "matches" "posts"
+        "other" ;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
 }
 
+/***********************************
+            Big New
+ ***********************************/
+#bignew {
+    grid-area: "bignew";
+    grid-column: span 2;
+}
+
+.bignew__card {
+    background-image: url("../imgs/pexels-mica-asato-1198174.jpg");
+    background-position:top;
+    background-size: cover;
+    height: 20rem;
+}
 
 /***********************************
             Matches
  ***********************************/
-
+/*IMPORTANT for grid-area to work, the area name should be between "" */
 #matches {
-    grid-area: matches;
+    grid-area: "matches";
+}
+
+.matches__list {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: lefttumb;
+    flex-direction: column;
+    justify-content: left;
     align-content: center;
-    
-    border-bottom: solid 0.5vh #C0996D;
-    margin: 0 0 0 200px;
     overflow: hidden;
 }
 
-.match{
+.matches__match {
     background-color: #000;
     color: darkgoldenrod;
     vertical-align: top;
     text-align: left;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     min-width: 12rem;
 }
 
-#nextmatch{
+#matches__nextmatch {
     color: #C5BA3A;
 }
 
@@ -193,13 +214,15 @@ ul {
  ***********************************/
 
 #posts {
-    grid-area: posts;
+    grid-area: "posts";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     text-align: left;
-    margin: 2vh 2vw 4vh;
-    width: 70%;
+    column-gap: 40px;
+    margin: 2vh 20px 2vh 40px;
+    width: 95%;
 }
-
-.post h1{
+.posts__post h2 {
     color: #424949;
     line-height: 2;
     font-size: 1.2rem;
@@ -207,24 +230,24 @@ ul {
     text-transform: capitalize;
 }
 
-.post h2{
+.posts__post h3 {
     line-height: 1.5;
     font-size: 1rem;
     text-transform: initial;
 }
 
-.post p{
+.posts__post p {
     text-indent: 1rem;
 }
 
-/***********************************
-            News
- ***********************************/
-
-#news {
-    grid-area: "news";
+.post__image {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
 }
-
+.post__image img {
+    width: 80%;
+}
 /***********************************
             Footer
  ***********************************/
