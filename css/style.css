@@ -21,9 +21,27 @@
     min-height: 100vh;
 }
 
+/***********************************
+            Flex
+ ***********************************/
+
+.nav__menu, .footer, .footer__column-list, #socialmedia, #logo_team {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav__menuitem__submenu, .footer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/***********************************
+            LOGO
+ ***********************************/
+
 #logo_team{
     position: absolute;
-    display: flex;
     justify-content: center;
     margin-top: 15px;
     width: var(--space-for-logo);
@@ -85,21 +103,16 @@ ul {
     list-style-type: none;
 }
 
-.nav__menuitem a, footer a {
+.nav__menuitem a, .footer__list a {
     text-decoration: none;
     color: #FFFFFF;
 }
 
-.nav__menu, footer, .socialmedia {
-    display: flex;
-    flex-flow: row wrap;
+.nav__menu {
+    margin-left: var(--space-for-logo);
     justify-content: flex-start;
     align-content: center;
     align-items: center;
-}
-
-.nav__menu {
-    margin-left: var(--space-for-logo);
 }
 
 .nav__menuitem, submenu_item{
@@ -115,8 +128,6 @@ ul {
 }
 
 .nav__menuitem__submenu {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     visibility: hidden;
     width: 8rem;
@@ -258,56 +269,63 @@ ul {
             Footer
  ***********************************/
 
-footer{
+.footer__lines {
+    margin-top: 2px;    
+    width: 90%;  
+} 
+
+.footer__line {  
+    border: 0;
+    height: 1px;  
+    background-image: linear-gradient(to right, rgb(192,153,109, 0.5), rgb(192,153,109, 1), rgb(192,153,109, 0.5));
+    margin: 4px auto;  
+}  
+
+.line2 {
+    width: 80%;
+}
+
+.line3 {
+    width: 70%;
+}
+
+.footer {
+    align-content: center;
     grid-area: footer;
-    display: flex;
-    flex: row wrap;
-    align-items: flex-start;
-    padding: 1vh;
     background-color: #37393E;
 }
 
-footer a {
-    font-size: 0.7rem;
+.footer__column-list {
+    justify-content: center;
+    padding: 1vh;
+    width: 95%;
 }
 
-.footercolumn {
+.footer__column {
     width: auto;
-    margin: 1vh 5%;
+    margin: 1vh auto;
 }
 
-.footercolumn_logo {
-    flex-basis: 150px;
-    flex-shrink: 1;
-}
-
-.footertext{
+.footer__text{
     color: #FFFFFF;
     font-weight: bold;
-    margin: 1vh 0vh;
 }
 
-#socialmedia{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} 
-
-.socialmedia li {
-    margin: 4px 4px 0 0;
+.footer__list a, .footer__list p {
+    color: #FFFFFF;
+    font-size: 0.5rem;
 }
 
 svg {
-    height:20px;
-    width:20px;
+    height: 20px;
+    width: 20px;
 }
-
 
 /***********************************
             CONTACT
  ***********************************/
 
-#header_image{
+ #header_image{
     background-image: url("../imgs/contact_image.jpg");
     background-size: cover;
     width: 100%;
