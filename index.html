@@ -3,40 +3,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <title>Team Website</title>
+
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Team Website</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div id="logo_team">
+    <div class="logo_team row-wrap">
         <img src="imgs/logo.svg" alt="Team logo" width="180">
     </div>   
 
-    <div id="grid">  
-        <div id="topheader">
+    <div class="grid">  
+        <div class="topheader">
 
-            <header id="header">
-                <div id="header__flex"> 
-                    <h1 id="header__teamname">TEAM'S NAME</h1>
-                    <div id="header__search">
-                        <div class="header__searchitem" id="search__login">Log in</div>
-                        <div class="header__searchitem" id="search__signin">Sign in</div>
-                        <div class="header__searchitem" id="search__field">
+            <header class="header row-wrap">
+                <h1 class="header__teamname">TEAM'S NAME</h1>
+                <div class="header__search">
+                    <div class="header__searchitem search__login">
+                        <a href="">Log in</a>
+                    </div>
+                    <div class="vertical-line">
+                        <div class="header__searchitem search__signin">
+                            <a href="">Sign in</a>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="header__searchitem search__field">
                             <input type="text" placeholder="Search..">
                         </div>
+                        <img src="/imgs/magnifier-icon.svg" alt="Facebook logo" width="20">
                     </div>
                 </div>
             </header>
             
             <nav id="nav">
-                <ul class="nav__menu">
-                    <li class="nav__menuitem"><a href="index.html">HOME</a></li>
-                    <li class="nav__menuitem"><a href="../pages/tickets.html">TICKETS</a></li>
-                    <li class="nav__menuitem"><a href="../pages/team.html">TEAM</a>
+                <ul class="nav__menu row-wrap">
+                    <li class="nav__menuitem"><a href="/index.html">HOME</a></li>
+                    <li class="nav__menuitem"><a href="/pages/tickets.html">TICKETS</a></li>
+                    <li class="nav__menuitem"><a href="/pages/team.html">TEAM</a>
                         <ul class="nav__menuitem__submenu">
                             <li class="nav__menuitem__submenuitem"><a href="">STATS</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">ROSTER</a></li>
@@ -44,7 +54,7 @@
                             <li class="nav__menuitem__submenuitem"><a href="">FACILITIES</a></li>
                         </ul>
                     </li>
-                    <li class="nav__menuitem"><a href="../pages/news.html">NEWS</a>
+                    <li class="nav__menuitem"><a href="/pages/news.html">NEWS</a>
                         <ul class="nav__menuitem__submenu">
                             <li class="nav__menuitem__submenuitem"><a href="">STANDINGS</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">PREVIOUS GAMES</a></li>
@@ -52,91 +62,152 @@
                             <li class="nav__menuitem__submenuitem"><a href="">OTHER NEWS</a></li>
                         </ul>
                     </li>
-                    <li class="nav__menuitem"><a href="../pages/store.html">SHOP</a>
+                    <li class="nav__menuitem"><a href="/pages/store.html">SHOP</a>
                         <ul class="nav__menuitem__submenu">
                             <li class="nav__menuitem__submenuitem"><a href="">JERSEYS</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">CLOTHES</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">OTHER ITEMS</a></li>
                         </ul>
                     </li>
-                    <li class="nav__menuitem"><a href="../pages/media.html">MEDIA</a>
+                    <li class="nav__menuitem"><a href="/pages/media.html">MEDIA</a>
                         <ul class="nav__menuitem__submenu">
                             <li class="nav__menuitem__submenuitem"><a href="">MEDIA CONTACTS</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">MEDIA RESOURCES</a></li>
                             <li class="nav__menuitem__submenuitem"><a href="">MAILING LIST</a></li>
                         </ul>
                     </li>
-                    <li class="nav__menuitem"><a href="../pages/contact.html">CONTACT</a></li>
+                    <li class="nav__menuitem"><a href="/pages/contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
 
-        <div id="content">
-            <div id="bignew">
+        <div class="content">
+            <div class="bignew carousel">
                 <div class="bignew__card">
-                </div>
-            </div>
-
-            <div id="matches">
-                <div class="matches__list">
-                    <div class="matches__match">
-                        <p>October 23th, 2021</p>
-                        <p>21:00 ET</p>
-                        <div>
-                            <span>First logo</span>
-                            <span>vs</span>
-                            <span>Second logo</span>
-                        </div>
-                        <p>Stadium, where</p>
-                    </div>
-            
-                    <div class="matches__match" id="matches__nextmatch">
-                        <p>October 30th, 2021</p>
-                        <p>21:00 ET</p>
-                        <div>
-                            <span>First logo</span>
-                            <span>vs</span>
-                            <span>Second logo</span>
-                        </div>
-                        <p>Stadium, where</p>
-                    </div>
-            
-                    <div class="matches__match">
-                        <p>November 13th, 2021</p>
-                        <p>21:00 ET</p>
-                        <div>
-                            <span>First logo</span>
-                            <span>vs</span>
-                            <span>Second logo</span>
-                        </div>
-                        <p>Stadium, where</p>
-                    </div>
-    
-                    <div class="matches__match">
-                        <p>November 20th, 2021</p>
-                        <p>21:00 ET</p>
-                        <div>
-                            <span>First logo</span>
-                            <span>vs</span>
-                            <span>Second logo</span>
-                        </div>
-                        <p>Stadium, where</p>
-                    </div>
-    
-                    <div class="matches__match">
-                        <p>November 20th, 2021</p>
-                        <p>21:00 ET</p>
-                        <div>
-                            <span>First logo</span>
-                            <span>vs</span>
-                            <span>Second logo</span>
-                        </div>
-                        <p>Stadium, where</p>
+                    <div class="bignew__info">
+                        <h2 class="bignew__title">A big away win for the team!</h2>
+                        <p class="bignew__text">Saturday, October 22nd.
+                        </p>
+                        <a href="" class="bignew__read">Read More</a>
                     </div>
                 </div>
             </div>
 
-            <section id="posts">
+            <div class="matches">
+                <div class="matches__list row-wrap">
+                    <div class="matches__match">
+                        <div class="matches__info">
+                            <p>October 30th, 2021</p>
+                            <p>21:00 ET</p>
+                            <p>Stadium, where</p>
+                        </div>
+                        <div class="matches__teams">
+                            <div class="matches__home team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                            <p class="vs">vs</p>
+                            <div class="matches__away team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                        </div>
+                        <button type="button" class="matches__buy-tickets">
+                            Buy tickets
+                        </button>
+                    </div>
+
+                    <div class="matches__match">
+                        <div class="matches__info">
+                            <p>October 30th, 2021</p>
+                            <p>21:00 ET</p>
+                            <p>Stadium, where</p>
+                        </div>
+                        <div class="matches__teams">
+                            <div class="matches__home team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                            <p class="vs">vs</p>
+                            <div class="matches__away team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                        </div>
+                        <button type="button" class="matches__buy-tickets">
+                            Buy tickets
+                        </button>
+                    </div>
+                       
+                    <div class="matches__match">
+                        <div class="matches__info">
+                            <p>October 30th, 2021</p>
+                            <p>21:00 ET</p>
+                            <p>Stadium, where</p>
+                        </div>
+                        <div class="matches__teams">
+                            <div class="matches__home team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                            <p class="vs">vs</p>
+                            <div class="matches__away team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                        </div>
+                        <button type="button" class="matches__buy-tickets">
+                            Buy tickets
+                        </button>
+                    </div>
+    
+                    <div class="matches__match">
+                        <div class="matches__info">
+                            <p>October 30th, 2021</p>
+                            <p>21:00 ET</p>
+                            <p>Stadium, where</p>
+                        </div>
+                        <div class="matches__teams">
+                            <div class="matches__home team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                            <p class="vs">vs</p>
+                            <div class="matches__away team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                        </div>
+                        <button type="button" class="matches__buy-tickets">
+                            Buy tickets
+                        </button>
+                    </div>
+    
+                    <div class="matches__match">
+                        <div class="matches__info">
+                            <p>October 30th, 2021</p>
+                            <p>21:00 ET</p>
+                            <p>Stadium, where</p>
+                        </div>
+                        <div class="matches__teams">
+                            <div class="matches__home team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                            <p class="vs">vs</p>
+                            <div class="matches__away team">
+                                <img src="/imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                <p class="team__name">Team's name</p>
+                            </div>
+                        </div>
+                        <button type="button" class="matches__buy-tickets">
+                            Buy tickets
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="posts">
                 <article class="posts__post">
                     <h2 class="post__title">Title for page</h2>
                     <h3 class="post__subtitle">Subtitle</h3>
@@ -153,7 +224,7 @@
                     <h2 class="post__title">Title for page</h2>
                     <h3 class="post__subtitle">Subtitle</h3>
                     <div class="post__image">
-                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                        <img src="imgs/pexels-rfstudio-3819585.jpg" alt="Image of a player with the ball">
                     </div>
                     <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
@@ -165,7 +236,7 @@
                     <h2 class="post__title">Title for page</h2>
                     <h3 class="post__subtitle">Subtitle</h3>
                     <div class="post__image">
-                        <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                        <img src="imgs/pexels-jeandaniel-francoeur-4789457.jpg" alt="Image of a player with the ball">
                     </div>
                     <p class="post_info"> 
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
@@ -188,14 +259,14 @@
             </section>
         </div>
 
-        <footer class="footer">
+        <footer class="footer row-wrap">
             <div class="footer__lines">
                 <hr class="footer__line line1">
                 <hr class="footer__line line2">
                 <hr class="footer__line line3">
             </div>
 
-            <div class="footer__column-list">
+            <div class="footer__column-list row-wrap">
 
                 <div class="footer__column footercolumn__logo">
                     <img src="imgs/logo.svg" alt="Team logo" width="100">
@@ -283,26 +354,31 @@
                 </div>
                 <div class="footer__column">
                     <h5 class="footer__text">SOCIAL MEDIA</h5>
-                    <ul id="socialmedia">
+                    <ul class="socialmedia row-wrap">
                         <li>
-                            <a href="https://www.instagram.com/"><img src="imgs/instagram-icon.svg" alt="Instagram logo" width="30"></a>
+                            <a href="https://www.instagram.com/"><img src="/imgs/instagram-icon.svg" alt="Instagram logo" width="30"></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/home"><img src="imgs/twitter-icon.svg" alt="Twitter logo" width="30"></a>
+                            <a href="https://twitter.com/home"><img src="/imgs/twitter-icon.svg" alt="Twitter logo" width="30"></a>
                         </li>
                         <li>
-                            <a href="https://tiktok.com/"><img src="imgs/tiktok-icon.svg" alt="TikTok logo" width="30"></a>
+                            <a href="https://tiktok.com/"><img src="/imgs/tiktok-icon.svg" alt="TikTok logo" width="30"></a>
                         </li>
                         <li>
-                            <a href="https://youtube.com/"><img src="imgs/youtube-icon.svg" alt="TikTok logo" width="30"></a>
+                            <a href="https://youtube.com/"><img src="/imgs/youtube-icon.svg" alt="TikTok logo" width="30"></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/"><img src="imgs/facebook-icon.svg" alt="Facebook logo" width="30"></a>
+                            <a href="https://www.facebook.com/"><img src="/imgs/facebook-icon.svg" alt="Facebook logo" width="30"></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
