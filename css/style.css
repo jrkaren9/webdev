@@ -44,7 +44,6 @@
     justify-content: center;
     margin-top: 15px;
     width: var(--space-for-logo);
-    float: left;
 }
 
 /***********************************
@@ -73,7 +72,6 @@
     color: darkgoldenrod;
     text-align: center;
     margin-left: var(--space-for-logo);
-    flex-grow: 2;
 }
 
 .header__search {
@@ -109,8 +107,24 @@
                 NAVBAR
  ***********************************/
 
-nav {
-    background-color: #37393E;
+.navbar .navbar-brand{
+    margin-left: var(--space-for-logo);
+}
+
+.navbar {
+    padding: 0
+}
+
+.nav-item {
+    padding: 4px;
+}
+
+.nav-item .dropdown-menu {
+    background-color: #6D6D6D;
+}
+
+.dropdown-menu a {
+    color: #FFFFFF;
 }
 
 ul {
@@ -129,14 +143,14 @@ ul {
     align-items: center;
 }
 
-.nav__menuitem, submenu_item{
+.nav__menuitem submenu_item{
     text-align: center;
     width: 8rem;
     height: 3rem;
     padding: 1rem 0 1rem 0;
 }
 
-.nav__menuitem:hover {
+.nav__menuitem:hover, .nav-item:hover {
     background-color: #6D6D6D;
     font-weight: 500;
 }
@@ -191,38 +205,48 @@ ul {
 }
 
 /***********************************
-            Big New
+           CAROUSEL Big New
  ***********************************/
  
-.bignew {
-    grid-area: "bignew";
+.carousel .carousel-item {
+    height: 40rem;
+    position: relative;
 }
 
-.bignew__card {
-    background-image: url("../imgs/pexels-mica-asato-1198174.jpg");
-    background-position: 50% 10%;
-    background-size: cover;
-    height: 30rem;
-
-    display: flex;
-    flex: column;
+.carousel-item img {
+    object-fit: cover;
+    height: 40rem;
 }
 
-.bignew__info {
-    margin-top: auto;
-    padding: 1rem 0; 
-    text-align: center;
+.carousel-item .carousel-caption {
+    min-height: 40%;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 50px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.bignew__title, .bignew__text, .bignew a {
+.carousel-caption a {
     color: #FFFFFF;
-}
-
-.bignew a {
     text-decoration: none;
 }
+
+.carousel-caption .bignew__title {
+    font-size: 2rem;
+}
+
+.carousel-caption .bignew__text {
+    font-size: 1rem;
+    margin: 0 auto 0.2rem auto;
+    width: 65%;
+}
+
+.carousel-caption .bignew__small-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+}s
 
 
 /* 
