@@ -49,6 +49,7 @@ ul {
  ***********************************/
 
 .logo_team{
+    z-index: 1;
     position: absolute;
     justify-content: center;
     margin-top: 5px;
@@ -146,12 +147,12 @@ ul {
     margin-left: var(--space-without-logo);
 }
 
-.nav-item .dropdown-menu {
-    background-color: #6D6D6D;
+.nav-item .dropdown-item {
+    background-color: #0A1E2C;
 }
 
 .dropdown-menu a {
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .dropdown-menu.show {
@@ -174,8 +175,8 @@ ul {
     padding: 0;
 }
 
-.dropdown-item:hover {
-    background-color: #0A1E2C;
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #37393E;
     color: #FFFFFF;
     transition: ease-in;
     transition-duration: 0.3s;
@@ -268,19 +269,6 @@ ul {
     margin-bottom: 0.6rem;
 }s
 
-
-/* 
-@keyframes from-bottom {
-    0% {
-        opacity: 0;
-        transform: translateY(200px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 
 /***********************************
             Matches
