@@ -40,6 +40,10 @@ ul {
     list-style-type: none;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 /***********************************
             LOGO
  ***********************************/
@@ -62,7 +66,7 @@ ul {
 
 .header {
     margin: 0;
-    padding: 4px 12px;
+    padding: 5px 0;
 }
 
 .header__searchitem a {
@@ -72,8 +76,8 @@ ul {
 
 .header__teamname {
     font-size: 2rem;
-    font-family: Impact, sans-serif;
-    font-weight: 200;
+    font-weight: 500;
+    font-stretch: ultra-condensed;
     color: #FFFFFF;
     margin: 0;
     margin-left: var(--space-without-logo);
@@ -85,6 +89,7 @@ ul {
 
 .header__searchitem {
     padding: 0 4px;
+    min-width: -moz-fit-content;
     min-width: fit-content;
 }
 
@@ -95,12 +100,29 @@ ul {
 }
 
 .header__search {
-    padding: 0;
+    max-width: -moz-fit-content;
     max-width: fit-content;
 }
 
 .header__search .btn {
     margin-right: 13px;
+}
+
+
+.btn-red:active, .btn-red:checked, .btn-red:hover {
+    background-color: #C20031;
+    border-color: #6f0f27;
+}
+
+.outline-white:focus, .outline-white:active, .outline-white:focus:active {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.15);
+    transition: box-shadow 0.15S ease-in-out;
+}
+
+.outline-white {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    border-radius: 0;
 }
 
 /***********************************
@@ -118,6 +140,10 @@ ul {
 
 .nav-item {
     padding: 4px;
+}
+
+.nav-link {
+    margin-left: var(--space-without-logo);
 }
 
 .nav-item .dropdown-menu {
@@ -173,6 +199,10 @@ ul {
     .navbar .navbar-brand{
         margin-left: var(--space-for-logo);
     }
+
+    .nav-link {
+        margin-left: 0;
+    }    
 
     .navbar .toggler-button{
         margin-left: 0;
