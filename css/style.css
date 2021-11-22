@@ -4,7 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    --space-for-logo: 250px;
+    --space-for-logo: 175px;
+    --space-without-logo: 15px;
 }
 
 /***********************************
@@ -30,9 +31,13 @@
     flex-flow: row wrap;
 }
 
-.nav__menuitem__submenu, .footer{
+.footer{
     display: flex;
     flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /***********************************
@@ -42,7 +47,7 @@
 .logo_team{
     position: absolute;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 5px;
     width: var(--space-for-logo);
 }
 
@@ -51,56 +56,51 @@
  ***********************************/
 
 .topheader {
-    background-color: #FFFFFF;
+    background-color: #37393E;
     grid-area: header;        
 }
 
 .header {
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 4px 12px;
 }
 
-.header__flex {
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
+.header__searchitem a {
+    text-decoration: none;
+    color: #E5E5E5;
 }
 
 .header__teamname {
     font-size: 2rem;
     font-family: Impact, sans-serif;
-    font-weight:400;
-    color: darkgoldenrod;
-    text-align: center;
-    margin-left: var(--space-for-logo);
+    font-weight: 200;
+    color: #FFFFFF;
+    margin: 0;
+    margin-left: var(--space-without-logo);
 }
 
-.header__search {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2px;
-    width: 21rem;
-}
-
-.vertical-line {
-    border-left: 1px solid #000;
+.account {
+    margin-right: 5px;
 }
 
 .header__searchitem {
-    margin: 0 5px;
+    padding: 0 4px;
+    min-width: fit-content;
 }
 
-.search {
-    display: flex;
-    flex: row nowrap;
-    align-items: center;
-    margin: 0 10px;
+.vertical-line {
+    max-width: 5px;
+    padding: 0;
+    color: #E5E5E5;
 }
 
-.header__searchitem a {
-    text-decoration: none;
-    color: #000000;
+.header__search {
+    padding: 0;
+    max-width: fit-content;
+}
+
+.header__search .btn {
+    margin-right: 13px;
 }
 
 /***********************************
@@ -108,11 +108,12 @@
  ***********************************/
 
 .navbar .navbar-brand{
-    margin-left: var(--space-for-logo);
+    margin-left: var(--space-without-logo);
 }
 
 .navbar {
-    padding: 0
+    padding: 0;
+    background-color: #0A1E2C;
 }
 
 .nav-item {
@@ -127,66 +128,55 @@
     color: #FFFFFF;
 }
 
-ul {
-    list-style-type: none;
+.dropdown-menu.show {
+    margin: 0;
+    border-radius: 0;
 }
 
-.nav__menuitem a, .footer__list a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
+/* Extra functionality for navbar */
 
-.nav__menu {
-    margin-left: var(--space-for-logo);
-    justify-content: flex-start;
-    align-content: center;
-    align-items: center;
-}
-
-.nav__menuitem submenu_item{
-    text-align: center;
-    width: 8rem;
-    height: 3rem;
-    padding: 1rem 0 1rem 0;
-}
-
-.nav__menuitem:hover, .nav-item:hover {
-    background-color: #6D6D6D;
+.nav-item:hover {
     font-weight: 500;
 }
 
-.nav__menuitem__submenu {
-    position: absolute;
-    visibility: hidden;
-    width: 8rem;
-    background-color: inherit;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #FFFFFF;
 }
 
-.nav__menuitem__submenuitem {
-    height: auto;
-    overflow: hidden;
-    padding: 0.5rem 1vw;
-    font-size: 0.7rem;
+.dropdown-menu {
+    border: 0;
+    padding: 0;
 }
 
-.nav__menuitem__submenuitem:hover {
-    background-color: #FFFFFF;
+.dropdown-item:hover {
+    background-color: #0A1E2C;
+    color: #FFFFFF;
     transition: ease-in;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
-.nav__menuitem__submenuitem:hover a {
-    color: #000000;
-    border-bottom-color: #C0996D;
-    border-width: 0 0 2px 0;
-    border-style: solid;
+.dropdown-divider {
+    margin: 0;
 }
 
-.nav__menuitem:hover .nav__menuitem__submenu {
-    visibility: visible;
-    position: relative;
-    top: 0.7rem;
-    left: 0;
+.navbar .toggler-button{
+    margin-left: var(--space-without-logo);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 991.8px) {
+    .header__teamname {
+        margin-left: var(--space-for-logo);
+    } 
+
+    .navbar .navbar-brand{
+        margin-left: var(--space-for-logo);
+    }
+
+    .navbar .toggler-button{
+        margin-left: 0;
+    }
 }
 
  /***********************************
@@ -406,6 +396,11 @@ ul {
     align-content: center;
     grid-area: footer;
     background-color: #37393E;
+}
+
+.footer__list a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .footer__column-list {
