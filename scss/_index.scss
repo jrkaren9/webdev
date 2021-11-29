@@ -4,12 +4,8 @@
 
 .grid {
     display: grid;
-    grid-template-areas: 
-        "header"
-        "content"
-        "footer";
-    grid-template-rows: $rem*6 80% auto;
-    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
 }
 
 /***********************************
@@ -40,7 +36,7 @@ ul {
 
 .topheader {
     background-color: #37393E;
-    grid-area: header;        
+    grid-area: "header";        
     
     /***********************************
                 LOGO
@@ -78,7 +74,7 @@ ul {
             color: #FFFFFF;
             margin: 0;
             margin-left: $space-without-logo;
-            width: fit-content;
+            width: auto;
     
             @media only screen and (min-width: $screen-lg) {
                 margin-left: $space-for-logo;
@@ -91,8 +87,6 @@ ul {
 
         .header__searchitem {
             padding: 0 4px;
-            min-width: -moz-fit-content;
-            min-width: fit-content;
         }
         
         .vertical-line {
@@ -129,8 +123,6 @@ ul {
         }
     }
     
-
-    
     /***********************************
                     NAVBAR
      ***********************************/
@@ -149,7 +141,7 @@ ul {
     }
     
     .nav-item {
-        padding: 4px;
+        padding: 0 4px;
     }
     
     .nav-link {
@@ -220,58 +212,75 @@ ul {
 
 .content{
     background-color: #E5E5E5;
-    grid-area: content;
+    grid-area: "content";
+    width: 100%;
+    min-height: 100%;
+}
+
+.content-index {
     display: grid;
     grid-template-areas:
         "bignew"
         "matches" 
         "posts";
-    width: 100%;
 }
 
 /***********************************
            CAROUSEL Big New
  ***********************************/
  
-.carousel .carousel-item {
+.carousel {
     height: 40rem;
-    position: relative;
+
+    &-item {
+        height: 40rem;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            height: 40rem;
+
+            @media only screen and (min-width: $screen-lg) { 
+               object-position: 0 40%;  
+            }   
+
+        }
+
+        &__caption {
+            min-height: 40%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding-bottom: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #FFFFFF;
+            text-align: center;
+
+            a {
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+            .bignew__title {
+                margin-top: 1rem;
+                font-size: 2rem;
+            }
+
+            .bignew__text {
+                font-size: 1rem;
+                margin: 0 auto 0.2rem auto;
+                width: 65%;
+            }
+
+            .bignew__small-text {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
 }
 
-.carousel-item img {
-    object-fit: cover;
-    height: 40rem;
-}
-
-.carousel-item .carousel-caption {
-    min-height: 40%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 50px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.carousel-caption a {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.carousel-caption .bignew__title {
-    font-size: 2rem;
-}
-
-.carousel-caption .bignew__text {
-    font-size: 1rem;
-    margin: 0 auto 0.2rem auto;
-    width: 65%;
-}
-
-.carousel-caption .bignew__small-text {
-    font-size: 0.8rem;
-    margin-bottom: 0.6rem;
-}s
 
 
 /***********************************
@@ -281,66 +290,66 @@ ul {
 .matches {
     grid-area: "matches";
     width: auto;
-}
 
-.matches__list {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: auto;
-    max-height: 16rem;
-    overflow: hidden;
-}
+    &__list {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+        max-height: 16rem;
+        overflow: hidden;
+    }
+    
+    &__match {
+        color: #000;
+        border-width: 0 2px 4px 2px;
+        border-style: solid;
+        border-color: #424949;
+        vertical-align: top;
+        width: 17rem;
+        height: 16rem;
+    
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
 
-.matches__match {
-    color: #000;
-    border-width: 0 2px 4px 2px;
-    border-style: solid;
-    border-color: #424949;
-    vertical-align: top;
-    width: 17rem;
-    height: 16rem;
+    &__teams {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem 1rem;
+    }
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
+    &__logo {
+        width: 6rem;
+    }
 
-.matches__teams {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem 1rem;
-}
+    .vs {
+        margin: 0.5rem;
+        font-size: 2rem;
+        font-weight: 800;
+    }
 
-.matches__logo {
-    width: 6rem;
-}
-
-.vs {
-    margin: 0.5rem;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.team__name {
-    padding-top: 0.5rem;
-    font-size: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.matches__info {
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-.matches__buy-tickets {
-    margin: 0 auto 1rem auto;
-    padding: 0.5rem;
-    border: 0;
-    width: 40%;
-    background-color: #C0996D;
+    .team__name {
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    &__info {
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    
+    &__buy-tickets {
+        margin: 0 auto 1rem auto;
+        padding: 0.5rem;
+        border: 0;
+        width: 40%;
+        background-color: #C0996D;
+    }
 }
 
 /***********************************
@@ -355,50 +364,53 @@ ul {
     column-gap: 40px;
     margin: 2rem 20px 0 40px;
     width: auto;
+
+    &__post {
+        margin-bottom: 3rem;
+        
+        h2 {
+            color: #424949;
+            line-height: 2;
+            font-size: 1.2rem;
+            font-style: bold;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            line-height: 1.5;
+            font-size: 1rem;
+            text-transform: initial;
+        }
+        
+        p {
+            text-indent: 1rem;
+        }
+        
+        .post__image {
+            display: flex;
+            justify-content: left;
+            margin: 5px;
+        }
+
+        .post__image img {
+            object-position: left center;
+            object-fit: cover;
+            width: 100%;
+            height: 20rem;
+        }
+    }
 }
 
-.posts__post {
-    margin-bottom: 3rem;
-}
-
-.posts__post h2 {
-    color: #424949;
-    line-height: 2;
-    font-size: 1.2rem;
-    font-style: bold;
-    text-transform: capitalize;
-}
-
-.posts__post h3 {
-    line-height: 1.5;
-    font-size: 1rem;
-    text-transform: initial;
-}
-
-.posts__post p {
-    text-indent: 1rem;
-}
-
-.post__image {
-    display: flex;
-    justify-content: left;
-    margin: 5px;
-}
-.post__image img {
-    object-position: left center;
-    object-fit: cover;
-    width: 100%;
-    height: 20rem;
-}
 /***********************************
             Footer
  ***********************************/
  
 .footer {
-    grid-area: footer;
+    grid-area: "footer";
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
     background-color: #0A1E2C;
 
     .footer__lines {
@@ -417,8 +429,8 @@ ul {
         }
     } 
         
-    .footer__column-list {
-        padding: 1vh;
+    &__column-list {
+        padding: 1vh 4vh;
 
         .footer__list {
             a, p {
@@ -433,27 +445,25 @@ ul {
         }
     }
     
-    .footer__column {
+    &__column {
         width: auto;
         margin: 1vh auto;
     }
     
-    .footer__text{
+    &__text{
         color: #FFFFFF;
         font-weight: bold;
     }
     
-    .footercolumn__logo {
-        max-width: 200px; 
-
-        @media only screen and (min-width: $screen-lg) {    
-            width: 20%;
-        }
+    &column__logo {
+        margin: 1vh auto;
 
         img {
+            min-width: 150px;
+            max-width: 15vw;
+
             @media only screen and (min-width: $screen-lg) {    
-                object-fit: cover;
-                max-width: 200px ;
+                max-width: 20vw ;
             }
         }
     }
