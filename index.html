@@ -143,14 +143,14 @@
             <div class="content content-index">
 
                 <!-- CAROUSEL WITH IMPORTANT NEWS  -->
-                <div id="bignew-carousel" class="carousel slide" data-ride="carousel">
+                <div id="bignew-carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#bignew-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#bignew-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#bignew-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div id="bignew-1" class="carousel-item active">
+                        <div id="bignew-1" class="carousel-item data-interval=1 active">
                             <img src="./imgs/gettyimages-1354493968-2048x2048.jpg" class="d-block w-100" alt="The team celebrating">
                             <div class="carousel-item__caption d-none d-md-block">
                                 <h5 class="bignew__title">The biggest win of the season!</h5>
@@ -159,7 +159,7 @@
                                 <a href="" class="bignew__read">Read More</a>
                             </div>
                         </div>
-                        <div id="bignew-2" class="carousel-item">
+                        <div id="bignew-2" class="carousel-item data-interval=1">
                             <img src="./imgs/pexels-mica-asato-1198174_crop.jpg" class="d-block w-100" alt="The team celebrating">
                             <div class="carousel-item__caption d-none d-md-block">
                                 <h5 class="bignew__title">A big away win for the team!</h5>
@@ -168,7 +168,7 @@
                                 <a href="" class="bignew__read">Read More</a>
                             </div>
                         </div>
-                        <div id="bignew-3" class="carousel-item">
+                        <div id="bignew-3" class="carousel-item data-interval=1">
                             <img src="./imgs/pexels-mica-asato-1198174_crop.jpg" class="d-block w-100" alt="The team celebrating">
                             <div class="carousel-item__caption d-none d-md-block">
                                 <h5 class="bignew__title">A big away win for the team!</h5>
@@ -180,7 +180,197 @@
                     </div>
                 </div>
 
-                <div class="matches">
+                <!-- CAROUSEL NEXT MATCHES  -->
+                <div id="nextmatches-carousel" class="carousel slide" data-interval="false">
+                    <div class="carousel-inner">
+                        <div id="matches__match-1" class="carousel-item active container-fluid">
+                            <div class="matches__list row">
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/washington_spirit_crest.png" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">WAS</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">NCC</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="matches__match-1" class="carousel-item container-fluid">
+                            <div class="matches__list row">
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                                <div class="matches__match col-4">
+                                    <div class="matches__info">
+                                        <p>October 30th, 2021</p>
+                                        <p>21:00 ET</p>
+                                        <p>Stadium, where</p>
+                                    </div>
+                                    <div class="matches__teams">
+                                        <div class="matches__home team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                        <p class="vs">vs</p>
+                                        <div class="matches__away team">
+                                            <img src="./imgs/logo.svg" alt="Team Logo" class="matches__logo"></img>
+                                            <p class="team__name">Team's name</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="matches__buy-tickets">
+                                        Buy tickets
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#nextmatches-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#nextmatches-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
+
+                <!-- <div class="matches">
                     <div class="matches__list row-wrap">
                         <div class="matches__match">
                             <div class="matches__info">
@@ -292,58 +482,62 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <section class="posts">
-                    <article class="posts__post">
-                        <h2 class="post__title">Title for page</h2>
-                        <h3 class="post__subtitle">Subtitle</h3>
-                        <div class="post__image">
-                            <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
-                        </div>
-                        <p class="post_info"> 
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                            totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-                        </p>
-                    </article>
-            
-                    <article class="posts__post">
-                        <h2 class="post__title">Title for page</h2>
-                        <h3 class="post__subtitle">Subtitle</h3>
-                        <div class="post__image">
-                            <img src="imgs/pexels-rfstudio-3819585.jpg" alt="Image of a player with the ball">
-                        </div>
-                        <p class="post_info"> 
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                            totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-                        </p>
-                    </article>
-            
-                    <article class="posts__post">
-                        <h2 class="post__title">Title for page</h2>
-                        <h3 class="post__subtitle">Subtitle</h3>
-                        <div class="post__image">
-                            <img src="imgs/pexels-jeandaniel-francoeur-4789457.jpg" alt="Image of a player with the ball">
-                        </div>
-                        <p class="post_info"> 
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                            totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-                        </p>
-                    </article>
-            
-                    <article class="posts__post">
-                        <h2 class="post__title">Title for page</h2>
-                        <h3 class="post__subtitle">Subtitle</h3>
-                        <div class="post__image">
-                            <img src="./imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
-                        </div>
-                        <p class="post_info"> 
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
-                            totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
-                        </p>
-                    </article>
-            
+                <section class="posts container-fluid">
+                    <div class="row">
+
+                        <article class="posts__post col-12 col-md-6">
+                            <h2 class="post__title">Title for page</h2>
+                            <h3 class="post__subtitle">Subtitle</h3>
+                            <div class="post__image">
+                                <img src="imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                            </div>
+                            <p class="post_info"> 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                            </p>
+                        </article>
+
+                        <article class="posts__post col-12 col-md-6">
+                            <h2 class="post__title">Title for page</h2>
+                            <h3 class="post__subtitle">Subtitle</h3>
+                            <div class="post__image">
+                                <img src="imgs/pexels-rfstudio-3819585.jpg" alt="Image of a player with the ball">
+                            </div>
+                            <p class="post_info"> 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                            </p>
+                        </article>
+
+                        <article class="posts__post col-12 col-md-6">
+                            <h2 class="post__title">Title for page</h2>
+                            <h3 class="post__subtitle">Subtitle</h3>
+                            <div class="post__image">
+                                <img src="imgs/pexels-jeandaniel-francoeur-4789457.jpg" alt="Image of a player with the ball">
+                            </div>
+                            <p class="post_info"> 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                            </p>
+                        </article>
+                
+                        <article class="posts__post col-12 col-md-6">
+                            <h2 class="post__title">Title for page</h2>
+                            <h3 class="post__subtitle">Subtitle</h3>
+                            <div class="post__image">
+                                <img src="./imgs/pexels-rfstudio-3621960.jpg" alt="Image of a player with the ball">
+                            </div>
+                            <p class="post_info"> 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis saepe possimus quod dicta debitis, 
+                                totam consequuntur labore alias, voluptates magnam expedita ad esse. Quam eos, sed ducimus ipsum fuga assumenda? 
+                            </p>
+                        </article>
+                    </div>
+
                 </section>
+
             </div>
 
             <footer class="footer">
@@ -470,11 +664,11 @@
             </footer>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+        
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
