@@ -247,6 +247,9 @@ ul {
 /***********************************
             Matches
  ***********************************/
+#nextmatches-carousel {
+  margin-top: 0.5rem;
+}
 #nextmatches-carousel .matches {
   grid-area: "matches";
   width: auto;
@@ -256,7 +259,7 @@ ul {
   justify-content: center;
   flex-wrap: wrap;
   width: auto;
-  max-height: 16rem;
+  max-height: auto;
   overflow: hidden;
 }
 #nextmatches-carousel .matches__match {
@@ -266,7 +269,7 @@ ul {
   border-color: #E5E5E5;
   vertical-align: top;
   width: 17rem;
-  height: 16rem;
+  padding: 0.5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -275,7 +278,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem 1rem;
+  padding: 0;
 }
 #nextmatches-carousel .matches__logo {
   width: 6rem;
@@ -293,13 +296,12 @@ ul {
   text-overflow: ellipsis;
 }
 #nextmatches-carousel .matches__info {
-  padding: 1rem;
   text-align: center;
   font-size: 0.8rem;
 }
 #nextmatches-carousel .matches__buy-tickets {
   margin: 0 auto 1rem auto;
-  padding: 0.5rem;
+  padding: 0;
   border: 0;
   width: 40%;
   background-color: #C0996D;
