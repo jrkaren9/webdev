@@ -35,7 +35,7 @@ ul {
 ***********************************/
 
 .topheader {
-    background-color: #37393E;
+    background-color: $content-background-color;
     grid-area: "header";        
     
     /***********************************
@@ -186,7 +186,7 @@ ul {
     }
     
     .dropdown-item:hover, .dropdown-item:focus {
-        background-color: #37393E;
+        background-color: $content-background-color;
         color: #FFFFFF;
         transition: ease-in;
         transition-duration: 0.3s;
@@ -211,7 +211,7 @@ ul {
  ***********************************/
 
 .content{
-    background-color: #37393E;
+    background-color: $content-background-color;
     grid-area: "content";
     width: 100%;
     min-height: 100%;
@@ -281,80 +281,135 @@ ul {
     }
 }
 
-
 /***********************************
             Matches
  ***********************************/
 
-#nextmatches-carousel {
-    margin-top: 0.5rem;
+// Esto fue posible gracias a:   
+// https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
 
-    .matches {
-        grid-area: "matches";
-        width: auto;
-        height: auto;
-    
-        &__list {
-            justify-content: center;
-            flex-wrap: wrap;
-            width: auto;
-            max-height: auto;
-            overflow: hidden;
-        }
+#nextmatches-carousel {
+    grid-area: "matches";
+    width: auto;
+    height: auto;
+
+    overflow-x: auto;
+    margin: 0.5rem;
+
+    // for iOS
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
         
-        &__match {
-            color: #FFFFFF;
-            border-width: 0 2px 4px 2px;
-            border-style: solid;
-            border-color: #E5E5E5;
-            vertical-align: top;
-            width: 17rem;
-            padding: 0.5rem;
-        
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
+        width: 20px;
+
+        &-track {
+            box-shadow: inset 0 0 5px grey; 
+            border-radius: 10px;
         }
-    
-        &__teams {
+
+        &-thumb {
+            background: #747679; 
+            border-radius: 10px;
+
+            /* Handle on hover */
+            &:hover {
+                box-shadow: inset 0 0 2px #E5E5E5; 
+            }
+        }
+    } 
+
+    .matches__match {
+        flex: 0 0 auto;
+
+        color: #FFFFFF;
+        background-color: #0A1E2C;
+        vertical-align: top;
+        width: 18rem;
+        margin: 0 0.5rem;
+        padding: 0;
+        
+        display: flex;
+        flex-flow: column nowrap;
+        
+        .match__info {
+            text-align: center;
+            font-size: 0.8rem;
+            border-bottom: 0.5px solid #747679;
+            border-left: 0.5rem solid #6f0f27;
+        }
+
+        .match__teams {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 0;
+            margin: 1rem 0 0;
+
+            .vs {
+                margin: 0.5rem 0.5rem 30%;
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            .team {
+                &__name {
+                    padding-top: 0.5rem;
+                    max-width: 6rem;
+                    height: 3rem;
+                    font-size: 0.8rem;
+
+                    overflow: hidden;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                }
+
+                &__logo {
+                    height: 4rem;
+                    width: 4rem;
+                }
+            }
         }
-    
-        &__logo {
-            width: 6rem;
-        }
-    
-        .vs {
-            margin: 0.5rem;
-            font-size: 2rem;
-            font-weight: 800;
-        }
-    
-        .team__name {
-            padding-top: 0.5rem;
-            font-size: 1rem;
-            overflow: hidden;
-            text-align: center;
-            text-overflow: ellipsis;
-        }
-        
-        &__info {
-            text-align: center;
-            font-size: 0.8rem;
-        }
-        
-        &__buy-tickets {
-            margin: 0 auto 1rem auto;
-            padding: 0;
-            border: 0;
-            width: 40%;
-            background-color: #C0996D;
+
+        .match__tickets {
+            height: 5rem;
+            position: relative;
+            margin-top: 1rem;
+            border-top: 1PX dashed #747679;
+
+            .ticket {
+                height: fit-content;
+                margin: 0.5rem 0.5rem;
+                width: 90%;
+                border-radius: 0;
+            }
+
+            &:before, &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 2rem;
+                width: 2rem;
+                background-color: $content-background-color;
+                border-radius: 50%;
+                top: -1rem;
+            }
+
+            &:before {
+                left: -1rem;
+            }
+
+            &:after {
+                right: -1rem;
+            }
         }
     }
+
+    .nextmatches-control {
+        width: 5%;
+    }
 }
+
 
 /***********************************
             Posts
