@@ -9,3 +9,35 @@
 p {
     margin: 0;
 }
+
+/***********************************
+            Grid
+ ***********************************/
+
+.grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+/***********************************
+            Flex
+ ***********************************/
+
+.row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
