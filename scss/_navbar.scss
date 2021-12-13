@@ -74,8 +74,8 @@
     
         .btn-red {
             &:active, &:checked, &:hover {
-                background-color: #C20031;
-                border-color: #6f0f27;
+                background-color: $light-red;
+                border-color: $dark-red;
             }
         }
         
@@ -97,7 +97,7 @@
         
     .navbar {
         padding: 0;
-        background-color: #0A1E2C;
+        background-color: $dark-grey;
 
         & .navbar-brand {
             margin-left: $space-without-logo;
@@ -129,7 +129,7 @@
     }
     
     .dropdown-menu {
-        background-color: #0A1E2C;;
+        background-color: $dark-grey;
         margin: 0;
         border-radius: 0;
     }
