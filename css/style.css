@@ -6,17 +6,20 @@
   font-family: Roboto, sans-serif;
 }
 
+body {
+  min-height: 100vh;
+}
+
 p {
   margin: 0;
 }
 
 /***********************************
-            Grid
+            Content
  ***********************************/
-.grid {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100%;
+.content {
+  background-color: #37393E;
+  flex-grow: 1;
 }
 
 /***********************************
@@ -38,6 +41,262 @@ ul {
 
 .row {
   margin: 0;
+}
+
+/***********************************
+           CAROUSEL Big New
+ ***********************************/
+#bignew-carousel {
+  height: 40rem;
+  overflow: hidden;
+}
+#bignew-carousel .carousel-item {
+  height: 40rem;
+  width: 100vw;
+  position: relative;
+}
+#bignew-carousel .carousel-item img {
+  object-fit: cover;
+  height: 40rem;
+}
+@media only screen and (min-width: 992px) {
+  #bignew-carousel .carousel-item img {
+    object-position: 0 40%;
+  }
+}
+#bignew-carousel .carousel-item__caption {
+  min-height: 40%;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  text-align: center;
+}
+#bignew-carousel .carousel-item__caption a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+#bignew-carousel .carousel-item__caption .bignew__title {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+#bignew-carousel .carousel-item__caption .bignew__text {
+  font-size: 1rem;
+  margin: 0 auto 0.2rem auto;
+  width: 65%;
+}
+#bignew-carousel .carousel-item__caption .bignew__small-text {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/***********************************
+            Matches
+ ***********************************/
+.nextmatches-carousel {
+  grid-area: matches;
+  width: auto;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+.nextmatches-carousel::-webkit-scrollbar {
+  width: 20px;
+}
+.nextmatches-carousel::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #747679;
+  border-radius: 10px;
+}
+.nextmatches-carousel::-webkit-scrollbar-thumb {
+  background: #747679;
+  border-radius: 10px;
+  /* Handle on hover */
+}
+.nextmatches-carousel::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 2px #E5E5E5;
+}
+.nextmatches-carousel .matches__match {
+  flex: 0 0 auto;
+  color: #FFFFFF;
+  background-color: #0A1E2C;
+  vertical-align: top;
+  width: 18rem;
+  margin: 0 0.5rem;
+  padding: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.nextmatches-carousel .matches__match .match__info {
+  text-align: center;
+  font-size: 0.8rem;
+  border-bottom: 0.5px solid #747679;
+  border-left: 0.5rem solid #6f0f27;
+}
+.nextmatches-carousel .matches__match .match__teams {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.nextmatches-carousel .matches__match .match__teams .vs {
+  margin: 0.5rem 0.5rem 30%;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.nextmatches-carousel .matches__match .match__teams .team__name {
+  padding-top: 0.5rem;
+  max-width: 6rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+.nextmatches-carousel .matches__match .match__teams .team__logo {
+  height: 4rem;
+  width: 4rem;
+}
+.nextmatches-carousel .matches__match .match__tickets {
+  height: 5rem;
+  position: relative;
+  margin-top: 1rem;
+  border-top: 1PX dashed #747679;
+}
+.nextmatches-carousel .matches__match .match__tickets .ticket {
+  height: fit-content;
+  margin: 0.5rem 0.5rem;
+  width: 90%;
+  border-radius: 0;
+}
+.nextmatches-carousel .matches__match .match__tickets:before, .nextmatches-carousel .matches__match .match__tickets:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: #37393E;
+  border-radius: 50%;
+  top: -1rem;
+}
+.nextmatches-carousel .matches__match .match__tickets:before {
+  left: -1rem;
+}
+.nextmatches-carousel .matches__match .match__tickets:after {
+  right: -1rem;
+}
+.nextmatches-carousel .nextmatches-control {
+  width: 5%;
+}
+
+/***********************************
+            Posts
+ ***********************************/
+.posts {
+  grid-area: posts;
+  text-align: left;
+  column-gap: 40px;
+  margin: 2rem 20px 0 40px;
+  width: auto;
+}
+.posts__post {
+  margin-bottom: 3rem;
+  color: #E5E5E5;
+}
+.posts__post h2 {
+  line-height: 2;
+  font-size: 1.2rem;
+  font-style: bold;
+  text-transform: capitalize;
+}
+.posts__post h3 {
+  line-height: 1.5;
+  font-size: 1rem;
+  text-transform: initial;
+}
+.posts__post p {
+  text-indent: 1rem;
+}
+.posts__post .post__image {
+  display: flex;
+  justify-content: left;
+  margin: 5px;
+}
+.posts__post .post__image img {
+  object-position: left center;
+  object-fit: cover;
+  width: 100%;
+  height: 20rem;
+}
+
+/***********************************
+        Content
+***********************************/
+.content-contact {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "banner" "tickets" "contact";
+}
+.content-contact .image__contact-us {
+  grid-area: banner;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 900;
+  /* Centered text */
+}
+.content-contact .image__contact-us img {
+  max-height: 50px;
+  width: 100%;
+  object-fit: cover;
+}
+.content-contact .image__contact-us .image__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 576px) {
+  .content-contact .image__contact-us {
+    font-size: 1.5rem;
+  }
+  .content-contact .image__contact-us img {
+    max-height: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content-contact .image__contact-us {
+    font-size: 2.5rem;
+  }
+}
+.content-contact .contact {
+  grid-area: contact;
+  margin: 1rem 0 2rem 0;
+  max-width: 2000px;
+  color: #FFF;
+}
+.content-contact .contact .contact-2 {
+  padding: 0 2rem;
+}
+.content-contact .contact .contact-2__title:nth-of-type(2n) {
+  margin-top: 1rem;
+}
+.content-contact .contact .contact-2 .form-floating {
+  color: #0A1E2C;
+}
+.content-contact .contact .contact-2 .form-text {
+  color: #E5E5E5;
+}
+.content-contact .nextmatches-carousel {
+  grid-area: tickets;
+  max-height: 23rem;
 }
 
 /***********************************
@@ -186,217 +445,13 @@ ul {
 }
 
 /***********************************
-           Content
-***********************************/
-.content {
-  background-color: #37393E;
-  grid-area: "content";
-  width: 100%;
-  min-height: 100%;
-}
-
-.content-index {
-  display: grid;
-  grid-template-areas: "bignew" "matches" "posts";
-}
-
-/***********************************
-           CAROUSEL Big New
- ***********************************/
-#bignew-carousel {
-  height: 40rem;
-}
-#bignew-carousel .carousel-item {
-  height: 40rem;
-  position: relative;
-}
-#bignew-carousel .carousel-item img {
-  object-fit: cover;
-  height: 40rem;
-}
-@media only screen and (min-width: 992px) {
-  #bignew-carousel .carousel-item img {
-    object-position: 0 40%;
-  }
-}
-#bignew-carousel .carousel-item__caption {
-  min-height: 40%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 50px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #FFFFFF;
-  text-align: center;
-}
-#bignew-carousel .carousel-item__caption a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-#bignew-carousel .carousel-item__caption .bignew__title {
-  margin-top: 1rem;
-  font-size: 2rem;
-}
-#bignew-carousel .carousel-item__caption .bignew__text {
-  font-size: 1rem;
-  margin: 0 auto 0.2rem auto;
-  width: 65%;
-}
-#bignew-carousel .carousel-item__caption .bignew__small-text {
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-
-/***********************************
-            Matches
- ***********************************/
-#nextmatches-carousel {
-  grid-area: "matches";
-  width: auto;
-  height: auto;
-  overflow-x: auto;
-  margin: 0.5rem;
-  -webkit-overflow-scrolling: touch;
-}
-#nextmatches-carousel::-webkit-scrollbar {
-  width: 20px;
-}
-#nextmatches-carousel::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-#nextmatches-carousel::-webkit-scrollbar-thumb {
-  background: #747679;
-  border-radius: 10px;
-  /* Handle on hover */
-}
-#nextmatches-carousel::-webkit-scrollbar-thumb:hover {
-  box-shadow: inset 0 0 2px #E5E5E5;
-}
-#nextmatches-carousel .matches__match {
-  flex: 0 0 auto;
-  color: #FFFFFF;
-  background-color: #0A1E2C;
-  vertical-align: top;
-  width: 18rem;
-  margin: 0 0.5rem;
-  padding: 0;
-  display: flex;
-  flex-flow: column nowrap;
-}
-#nextmatches-carousel .matches__match .match__info {
-  text-align: center;
-  font-size: 0.8rem;
-  border-bottom: 0.5px solid #747679;
-  border-left: 0.5rem solid #6f0f27;
-}
-#nextmatches-carousel .matches__match .match__teams {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 1rem 0 0;
-}
-#nextmatches-carousel .matches__match .match__teams .vs {
-  margin: 0.5rem 0.5rem 30%;
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-#nextmatches-carousel .matches__match .match__teams .team__name {
-  padding-top: 0.5rem;
-  max-width: 6rem;
-  height: 3rem;
-  font-size: 0.8rem;
-  overflow: hidden;
-  text-align: center;
-  text-overflow: ellipsis;
-}
-#nextmatches-carousel .matches__match .match__teams .team__logo {
-  height: 4rem;
-  width: 4rem;
-}
-#nextmatches-carousel .matches__match .match__tickets {
-  height: 5rem;
-  position: relative;
-  margin-top: 1rem;
-  border-top: 1PX dashed #747679;
-}
-#nextmatches-carousel .matches__match .match__tickets .ticket {
-  height: fit-content;
-  margin: 0.5rem 0.5rem;
-  width: 90%;
-  border-radius: 0;
-}
-#nextmatches-carousel .matches__match .match__tickets:before, #nextmatches-carousel .matches__match .match__tickets:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  background-color: #37393E;
-  border-radius: 50%;
-  top: -1rem;
-}
-#nextmatches-carousel .matches__match .match__tickets:before {
-  left: -1rem;
-}
-#nextmatches-carousel .matches__match .match__tickets:after {
-  right: -1rem;
-}
-#nextmatches-carousel .nextmatches-control {
-  width: 5%;
-}
-
-/***********************************
-            Posts
- ***********************************/
-.posts {
-  grid-area: "posts";
-  text-align: left;
-  column-gap: 40px;
-  margin: 2rem 20px 0 40px;
-  width: auto;
-}
-.posts__post {
-  margin-bottom: 3rem;
-  color: #E5E5E5;
-}
-.posts__post h2 {
-  line-height: 2;
-  font-size: 1.2rem;
-  font-style: bold;
-  text-transform: capitalize;
-}
-.posts__post h3 {
-  line-height: 1.5;
-  font-size: 1rem;
-  text-transform: initial;
-}
-.posts__post p {
-  text-indent: 1rem;
-}
-.posts__post .post__image {
-  display: flex;
-  justify-content: left;
-  margin: 5px;
-}
-.posts__post .post__image img {
-  object-position: left center;
-  object-fit: cover;
-  width: 100%;
-  height: 20rem;
-}
-
-/***********************************
             Footer
  ***********************************/
 .footer {
-  grid-area: "footer";
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
   background-color: #0A1E2C;
 }
 .footer .footer__lines {
@@ -441,7 +496,10 @@ ul {
 .footer__column-list .footer__list a, .footer__column-list .footer__list p {
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+}
+.footer__column-list .footer__list li {
+  line-height: 1.4rem;
 }
 @media only screen and (min-width: 1400px) {
   .footer__column-list {
@@ -454,33 +512,21 @@ ul {
 }
 .footer__text {
   color: #FFFFFF;
-  font-weight: bold;
 }
 .footercolumn__logo {
   margin: 1vh auto;
 }
 .footercolumn__logo img {
-  min-width: 150px;
-  max-width: 15vw;
-}
-@media only screen and (min-width: 992px) {
-  .footercolumn__logo img {
-    max-width: 20vw;
-  }
+  min-width: 10rem;
+  max-width: 15rem;
 }
 .footer svg {
   height: 20px;
   width: 20px;
 }
-
-/***********************************
-            CONTACT
- ***********************************/
-#header_image {
-  background-image: url("../imgs/contact_image.jpg");
-  background-size: cover;
-  width: 100%;
-  height: 20rem;
+.footer .copyright {
+  text-align: center;
+  font-size: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */

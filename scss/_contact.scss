@@ -1,0 +1,85 @@
+/***********************************
+        Content
+***********************************/
+
+.content-contact {
+    height: 100%;
+
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "tickets"
+        "contact";
+
+    .image__contact-us {
+
+        // with the help of https://www.w3schools.com/howto/howto_css_image_text.asp
+        grid-area: banner;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: fit-content;
+
+        font-size: 1rem;
+        font-weight: 900;
+
+        img {
+            max-height: 50px; 
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Centered text */
+        .image__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        @media only screen and (min-width: $screen-sm) { 
+            font-size: 1.5rem;
+
+            img {
+                max-height: 75px; 
+            }
+        }
+
+        @media only screen and (min-width: $screen-md) { 
+            font-size: 2.5rem;
+        }  
+    }
+
+    .contact {
+        grid-area: contact;
+        margin: 1rem 0 2rem 0;
+        max-width: 2000px;
+
+        color: #FFF;
+
+        .contact-2 {
+
+            padding: 0 2rem;
+
+            &__title:nth-of-type(2n) {
+                margin-top: 1rem;
+            }
+
+            .form-floating{
+                color: $dark-grey;
+            }
+
+            .form-text {
+                color: $almost-white;
+            }
+        }
+    }
+
+    .nextmatches-carousel {
+        grid-area: tickets;
+        max-height: 23rem;
+    }
+}    
+
+

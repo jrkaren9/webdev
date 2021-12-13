@@ -5,7 +5,45 @@
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
 }
+body {
+    min-height: 100vh;
+}
 
 p {
     margin: 0;
 }
+
+/***********************************
+            Content
+ ***********************************/
+
+.content{
+    background-color: $content-background-color;
+
+    flex-grow: 1;
+
+}
+
+
+/***********************************
+            Flex
+ ***********************************/
+
+.row-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
