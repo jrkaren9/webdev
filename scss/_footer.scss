@@ -35,6 +35,11 @@
                 color: #FFFFFF;
                 font-size: 0.7rem;
             }
+
+            a.disabled {
+                color: gray;
+                pointer-events: none;
+            }
             
             li {
                 line-height: 1.4rem;

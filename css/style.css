@@ -43,6 +43,44 @@ ul {
   margin: 0;
 }
 
+.content {
+  height: 100%;
+}
+.content .image__contact-us {
+  grid-area: banner;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 900;
+  /* Centered text */
+}
+.content .image__contact-us img {
+  max-height: 50px;
+  width: 100%;
+  object-fit: cover;
+}
+.content .image__contact-us .image__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 576px) {
+  .content .image__contact-us {
+    font-size: 1.5rem;
+  }
+  .content .image__contact-us img {
+    max-height: 75px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content .image__contact-us {
+    font-size: 2.5rem;
+  }
+}
+
 /***********************************
            CAROUSEL Big New
  ***********************************/
@@ -234,6 +272,15 @@ ul {
   height: 20rem;
 }
 
+.content-tickets {
+  display: grid;
+  grid-template-areas: "banner" "options" "tickets";
+}
+.content-tickets .nextmatches-carousel {
+  grid-area: tickets;
+  max-height: 23rem;
+}
+
 .news {
   margin: 50px 10%;
   max-width: 1500px;
@@ -279,43 +326,8 @@ ul {
         Content
 ***********************************/
 .content-contact {
-  height: 100%;
   display: grid;
   grid-template-areas: "banner" "tickets" "contact";
-}
-.content-contact .image__contact-us {
-  grid-area: banner;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: fit-content;
-  font-size: 1rem;
-  font-weight: 900;
-  /* Centered text */
-}
-.content-contact .image__contact-us img {
-  max-height: 50px;
-  width: 100%;
-  object-fit: cover;
-}
-.content-contact .image__contact-us .image__text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@media only screen and (min-width: 576px) {
-  .content-contact .image__contact-us {
-    font-size: 1.5rem;
-  }
-  .content-contact .image__contact-us img {
-    max-height: 75px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .content-contact .image__contact-us {
-    font-size: 2.5rem;
-  }
 }
 .content-contact .contact {
   grid-area: contact;
@@ -538,6 +550,10 @@ ul {
   text-decoration: none;
   color: #FFFFFF;
   font-size: 0.7rem;
+}
+.footer__column-list .footer__list a.disabled {
+  color: gray;
+  pointer-events: none;
 }
 .footer__column-list .footer__list li {
   line-height: 1.4rem;
